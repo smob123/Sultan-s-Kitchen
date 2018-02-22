@@ -1,0 +1,249 @@
+/* 
+    Created on : 20-Feb-2018, 8:54:40 PM
+    Author     : Sultan
+*/
+
+* {
+    max-width: 240px;
+}
+.menuDiv img {
+    display: block;
+}
+
+* {
+    max-width: 2000px;
+    margin: auto;
+    text-align: center;
+    font-family: Arial;
+}
+
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.mainNav {
+    position: relative;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 5vh;
+    z-index: 2;
+    background-color: black;
+    opacity: 0.7;
+}
+
+.mainNav p {
+    position: relative;
+    top: 1vh;
+    left: 2%;
+    color: white;
+    display: inline;
+    margin-right: 5%;
+    font-size: 110%;
+    opacity: 1;
+    cursor: pointer;
+}
+
+.welcome {
+    position: relative;
+    text-align: center;
+    top: 13vh;
+    color: white;
+    z-index: 2;
+}
+
+.header {
+    position: absolute;
+    width: 0%;
+    bottom: 0%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    height: 100vh;
+    width: 100%;
+    background-image: url('images/header1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    max-width: 100%;
+}
+
+.menuDiv {
+    position: relative;
+    left: 0;
+    top: 83vh;
+    height: 55vh;
+    width: 100%;
+    background-color: white;
+}
+
+.menuDiv h2 {
+    position: relative;
+    color: #696969;
+}
+
+.menuDiv img {
+    width: 30%;
+    margin-right: 2%;
+    display: inline;
+}
+
+.breakdastContainer {
+    height: 75%;
+    width: 30%;
+    margin-left: 2%;
+    float: left;
+    margin-top: 0.5%;
+}
+
+.breakdastContainer img {
+    float: left;
+    margin-top: 3%;
+    width: 100%;
+    height: 100%;
+}
+
+.breakfastOverlay {
+    position: absolute;
+    top: 17.9%;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    margin-left: 2%;
+    height: 75.6%;
+    width: 30%;
+    opacity: 0;
+    transition: 0.5s ease-in;
+    background-color: black;
+}
+
+.breakfastOverlay p {
+    margin-top: 30%;
+    color: white;
+}
+
+.breakdastContainer:hover .breakfastOverlay {
+    opacity: 0.5;
+}
+
+.lunchContainer {
+    float: left;
+    margin-top: 1.3%;
+    margin-left: 4%;
+    width: 30%;
+    height: 75%;
+}
+
+.lunchContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.lunchOverlay {
+    position: absolute;
+    top: 17.9%;
+    margin-left: 0;
+    width: 29.5%;
+    height: 73.1%;
+    opacity: 0;
+    transition: 0.5s ease-in;
+    background-color: black;
+    border: 3px solid black;
+}
+
+.lunchContainer:hover .lunchOverlay {
+    opacity: 0.5;
+}
+
+.lunchOverlay p {
+    margin-top: 28%;
+    color: white;
+}
+
+.dinnerContainer {
+    position: relative;
+    top: 4.5%;
+    width: 28%;
+    height: 76%;
+    float: left;
+    margin-left: 4%; 
+}
+
+.dinnerContainer img {
+    width: 100%;
+    height: 100%;
+}
+
+.dinnerOverlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s ease-in;
+    background-color: black;
+    opacity: 0;
+}
+
+.dinnerOverlay p {
+    color: white;
+    margin-top: 30%;
+}
+
+.dinnerContainer:hover .dinnerOverlay {
+    opacity: 0.5;
+}
+
+.contactContainer {
+    position: relative;
+    color: white;
+    top: 80vh;
+    margin: 0;
+    background-color: #282828;
+    height: 85vh;
+}
+
+.contactContainer h2 {
+    margin-bottom: 3%;
+}
+
+.info {
+    float: left;
+    margin-left: 10%;
+    margin-right: 25%;
+}
+
+.info h3 {
+    margin-bottom: 10%;
+}
+
+.icon {
+    margin-top: 20%;
+}
+
+.location {
+    margin-right: 0;
+    margin-left: 25%;
+}
+
+.location h3 {
+    margin-bottom: 2%;
+}
+
+footer {
+    margin: 0;
+    position: relative;
+    top: 77vh;
+    bottom: 0;
+    background-color: #383838;
+    height: 5vh;
+}
+
+footer p {
+    position: relative;
+    top:30%;
+    right: 35%;
+    margin-bottom: 0;
+}
