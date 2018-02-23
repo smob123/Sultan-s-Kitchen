@@ -3,6 +3,179 @@
     Author     : Sultan
 */
 
+@media screen and (max-width: 480px) {
+    * {
+        max-width: 100%;
+        text-align: center;
+        font-family: Arial;
+    }
+    
+    body {
+        background-color: black;
+        margin: 0;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .phoneNav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 9vh;;
+        width: 23%;
+        cursor: pointer;
+    }
+    
+    .phoneNav * {
+        background-color: white;
+        height: 15%;
+        margin-bottom: 15%;
+    }
+    
+    #mainNav {
+        position: absolute;
+        left: 0;
+        color: white;
+        margin-top: 16%;
+        display: none;
+        background-color: black;
+        opacity: 0.7;
+        width: 100%;
+        height: 17vh;
+    }
+    
+    #mainNav * {
+        display: block;
+        color: white;
+        text-decoration: none;
+    }
+    
+    #mainNav p:hover {
+        color: gold;
+    }
+    
+    .welcome {
+        color: white;
+        margin-top: 25%;
+        float: left;
+    }
+    
+    .header {
+        margin-top: 0;
+        height: 50vh;
+        width: 100%;
+        margin-bottom: 0;
+        background-image: url("images/header1.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 50vh;
+    }
+    
+    .menuDiv {
+        position: relative;
+        bottom: 3.5vh;
+        background-color: white;
+        margin-top: 0;
+    }
+    
+    .menuDiv h2 {
+        color: #696969;
+    }
+    
+    .contactContainer {
+        position: relative;
+        bottom: 6.3vh;
+        color: white;
+        background-color: #282828;
+    }
+    
+    footer {
+        position: relative;
+        margin-top: 0;
+        margin-bottom: 0;
+        bottom: 9vh;
+        color: white;
+        height: 5vh;
+        background-color: #383838;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 899px) {
+    * {
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    body {
+        max-width: 100%;
+        margin: 0;
+    }
+    
+    #mainNav {
+        position: relative;
+        height: 4vh;
+        background-color: black;
+        opacity: 0.7;
+        z-index: 2;
+    }
+    
+    #mainNav p {
+        color: white;
+        display: inline;
+        margin-right: 10%;
+        color: white;
+    }
+    
+    #mainNav a {
+        text-decoration: none;
+    }
+    
+    #mainNav p:hover {
+        color: gold;
+    }
+    
+    .welcome {
+        color:white;
+        position: relative;
+        top: 15vh;
+        z-index: 2;
+    }
+    
+    .header {
+        position: absolute;
+        bottom: 0;
+        background-image: url("images/header1.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        width: 100%;
+        height: 100vh;
+    }
+    
+    .menuDiv {
+        position: relative;
+        top: 100vh;
+    }
+    
+    .menuDiv h2 {
+        color: #696969;
+    }
+    
+    .contactContainer {
+        position: relative;
+        top: 100vh;
+        background-color: #282828;
+    }
+    
+    footer {
+        position: relative;
+        top: 97.3vh;
+        background-color: #383838;
+    }
+}
+
+@media screen and (min-width: 900px) {
 * {
     max-width: 240px;
 }
@@ -23,7 +196,7 @@ body {
     padding: 0;
 }
 
-.mainNav {
+#mainNav {
     position: relative;
     top: 0%;
     left: 0%;
@@ -34,7 +207,7 @@ body {
     opacity: 0.7;
 }
 
-.mainNav p {
+#mainNav p{
     position: relative;
     top: 1vh;
     left: 2%;
@@ -43,7 +216,14 @@ body {
     margin-right: 5%;
     font-size: 110%;
     opacity: 1;
-    cursor: pointer;
+}
+
+#mainNav p:hover {
+    color: gold;
+}
+
+#mainNav a {
+    text-decoration: none;
 }
 
 .welcome {
@@ -224,12 +404,20 @@ body {
 }
 
 .location {
+    position: relative;
+    bottom: 5%;
+    margin-top: 0;
     margin-right: 0;
     margin-left: 25%;
 }
 
 .location h3 {
     margin-bottom: 2%;
+}
+
+.location iframe {
+    position: relative;
+    width: 50%;
 }
 
 footer {
@@ -246,4 +434,5 @@ footer p {
     top:30%;
     right: 35%;
     margin-bottom: 0;
+}
 }
