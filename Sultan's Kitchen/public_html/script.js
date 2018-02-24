@@ -14,3 +14,8 @@ function displayNavMenu() {
         document.getElementById("mainNav").style.display = "block";
     }
 }
+
+function sendData() {
+    alert("Message sent!");
+    event.preventDefault();
+}
