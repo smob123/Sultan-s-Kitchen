@@ -120,7 +120,7 @@
         top: 2vh;
     }
     
-    .contactFormContainer textarea {
+    .contactFormContainer input {
         position: relative;
         left: 25%;
         display: block;
@@ -265,18 +265,15 @@
 }
 
 @media screen and (min-width: 900px) {
-    * {
-        max-width: 240px;
-    }
     .menuDiv img {
         display: block;
     }
 
     * {
-        max-width: 2000px;
         margin: auto;
         text-align: center;
         font-family: Arial;
+        font-size: 1.2vw;
     }
 
     body {
@@ -321,6 +318,10 @@
         top: 13vh;
         color: white;
         z-index: 2;
+    }
+    
+    .welcome h1 {
+        font-size: 2vw;
     }
 
     .header {
@@ -491,6 +492,7 @@
 
     .icon {
         margin-top: 20%;
+        width: 15vw;
     }
 
     .location {
@@ -507,7 +509,8 @@
 
     .location iframe {
         position: relative;
-        width: 50%;
+        width: 35vw;
+        height: 30vw;
     }
 
     footer {
@@ -543,16 +546,18 @@
         color: white;
     }
 
-    .contactForm textarea {
+    .contactForm input {
         resize: none;
         display: block;
         width: 30%;
+        height: 4vh;
         margin-bottom: 2%;
     }
 
     #messageBox {
         margin-top: 3%;
         margin-bottom: 3%;
+        width: 30%;
         height: 15vh;
         display: block;
     }
@@ -571,4 +576,8 @@
         left: 0;
         width: 99%;
     }
+}
+
+@media print {
+    /*Todo*/
 }

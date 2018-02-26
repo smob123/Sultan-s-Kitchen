@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
     <head>
         <title>Contact us</title>
@@ -36,9 +31,9 @@ and open the template in the editor.
         <form class="contactForm">
             <h3>Contact us</h3>
             
-            <textarea placeholder="E-mail" id="emailBox"></textarea>
-            <textarea placeholder="Name" id="nameBox"></textarea>
-            <textarea placeholder="Phone number" id="phoneBox"></textarea>
+            <input placeholder="Name" id="nameBox">
+            <input placeholder="E-mail" id="emailBox" type="email" onblur="validateEmail(this)">
+            <input placeholder="Phone number" type="tel" id="phoneBox" onblur="validatePhone(this)">
             <textarea placeholder="Message" id="messageBox"></textarea>
             <button id="submitButton" onclick="sendData()">Submit</button>
         </form>
