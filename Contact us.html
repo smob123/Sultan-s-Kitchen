@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Contact us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="images/logo.ico" rel="icon">
+        <link href="styles.css" rel="stylesheet">
+        <script src="scripts/contact.js"></script>
+    </head>
+    <body>
+        <div class="phoneNav" onclick="expand()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id='mainNav'>
+            <a href='index.html'><p>Home</p></a>
+            <a href="menus/Menu.pdf" target="_blank"><p>Menu</p></a>
+            <a href="Contact us.html"><p>Contact us</p></a>
+        </nav>
+
+        <div class='header'>
+                <h1 class="welcome">Contact us</h1>
+        </div>
+
+        <div class="contactFormContainer">
+            
+            <form class="contactForm">
+                <h3>Contact us</h3>
+
+                <input placeholder="Name" id="nameBox">
+                <input placeholder="E-mail" id="emailBox" type="email" onblur="validateEmail(this)" required>
+                <input placeholder="Phone number" type="tel" id="phoneBox" onblur="validatePhone(this)" required>
+                <textarea placeholder="Message" id="messageBox" required></textarea>
+                <button id="submitButton" onclick="sendData()">Submit</button>
+            </form>
+        </div>
+
+        <footer class="contactPageFooter">
+            <p>Sultan's Kitchen &COPY;</p>
+        </footer>
+    </body>
+</html>

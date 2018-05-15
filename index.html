@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Sultan's Kitchen</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="icon/favicon" href="images/logo.ico" rel="icon">
+        <link rel="stylesheet" href='styles.css'>
+        <link rel="stylesheet/less" type="text/css" href='styles.less'>
+        <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+        <script src='scripts/script.js'></script>
+    </head>
+    <body onresize="displayNavMenu()">
+        <div class="phoneNav" onclick="expand()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <nav id='mainNav'>
+            <a href='index.html'><p>Home</p></a>
+            <a href="menus/Menu.pdf" target="_blank"><p>Menu</p></a>
+            <a href="Contact us.html"><p>Contact us</p></a>
+        </nav>
+
+
+        <div class='header'>
+            <h1 class="welcome">Welcome to Sultan's Kitchen</h1>
+            <a href="order.html">
+                <button class="order">Order now</button>
+            </a>
+        </div>
+
+        <section class='about-us'>
+            <h2 id='about-heading'>About us</h2>
+            
+            <div class="first-div">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor augue at nisl aliquet pulvinar.
+                </p>
+                <img class='about-img' src='images/about-img.jpg' alt='image' align="middle">
+            </div>
+
+            <div class="second-div">
+                <p>
+                    Proin commodo eleifend nibh, nec vehicula augue condimentum vitae.
+                </p>
+                <img src="images/about-img2.jpg" alt="about-img2" class="about-img2" align="middle">
+            </div>
+        </section>
+
+        <div class="line"></div>
+
+        <section class='menuDiv'>
+            <h2>Our menu</h2>
+
+            <div id="menus">
+                <div class="breakdastContainer">
+                    <div id="breakfast-img">
+                        <a href='menus/Breakfast.pdf' target='_blank'>
+                            <div 
+                                class="overlay">
+                                <p>Breakfast</p>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="lunchContainer">
+                    <div id="lunch-img">
+                        <a href="menus/Lunch.pdf" target="_blank">
+                            <div class="overlay">
+                                <p>Lunch</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="dinnerContainer">
+                    <div id="dinner-img">
+                        <a href="menus/Dinner.pdf" target="_blank">
+                            <div class="overlay">
+                                <p>Dinner</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contactContainer">
+            <h2>Contact us</h2>
+            
+            <div class="contactDiv">
+                <div class='info'>
+                    <h3>Phone or e-mail</h3>
+                    <p>Phone number: 902-999-9999</p>
+                    <p>E-mail: inquiry@sultanskitchen.ca</p>
+                    <img src="images/logo.png" alt="logo" class="icon">
+                </div>
+
+                <div class='location'>
+                    <h3>Our location</h3>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11355.553053178372!2d-63.577522287048325!3d44.640200640182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1519272371336"
+                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>Sultan's Kitchen &COPY;</p>
+        </footer>
+    </body>
+</html>
