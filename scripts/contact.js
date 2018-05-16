@@ -1,35 +1,26 @@
-var expanded = false;
-var name, email, phoneNum, message;
-var elements = new Array();
+var contactInfo = [];
 
-function expand() {
-    if (!expanded) {
-        document.getElementById("mainNav").style.display = "inline";
-        expanded = true;
-    } else {
-        document.getElementById("mainNav").style.display = "none";
-        expanded = false;
-    }
-}
-
-function displayNavMenu() {
-    if (window.innerWidth > 480) {
-        document.getElementById("mainNav").style.display = "block";
-    }
-}
+/*
+ * handle displaying contact form messages
+ */
 
 function sendData() {
     for (var i = 0; i < VariableList().length; i++) {
-        if (elements[i] === "") {
-            alert("Please fill empty feilds");
-            event.preventDefault();
+        //if a text feild is empty
+        if (contactInfo[i] === "") {
+            alert("Please fill empty feilds"); //require user to fill empty feilds
+            event.preventDefault(); //do not refresh page
             return;
         }
     }
-    alert("Message sent!");
-    event.preventDefault();
+    alert("Message sent!"); //else send message
+    event.preventDefault(); //do not refresh page
 }
 
+/*
+ * highlight empty feilds
+ */
+////////////////////////////////////////////
 function validateEmail(email) {
     if (!email.checkValidity() || email.value === "") {
         email.style.border = "2px solid red";
@@ -45,14 +36,19 @@ function validatePhone(phoneNumber) {
         phoneNumber.style.border = "2px solid green";
     }
 }
+/////////////////////////////////////////////
+
+/*
+ * list of text feilds
+ */
 
 function VariableList() {
     name = document.getElementById("nameBox");
     email = document.getElementById("emailBox");
     phoneNum = document.getElementById("phoneBox");
     message = document.getElementById("messageBox");
-    
-    elements = [name.value, email.value, phoneNum.value, message.value];
-    
-    return elements;
+
+    contactInfo.push(name.value, email.value, phoneNum.value, message.value);
+
+    return contactInfo;
 }
