@@ -482,6 +482,7 @@
     footer {
         background-color: #383838;
         position: relative;
+        margin-top: 7.5%;
     }
 
     footer p {
@@ -490,8 +491,30 @@
     }
     
     /*Order page*/
-    /*TODO order page fix layout*/
-
+    #add {
+        background-color: white;
+        border-radius: 50px;
+        border: 1px solid black;
+    }
+    
+    #add:hover {
+        cursor: pointer;
+    }
+    
+    #remove {
+        background-color: white;
+        border-radius: 50px;
+        border: 1px solid black;
+    }
+    
+    #remove:hover {
+        cursor: pointer;
+    }
+    
+    #total {
+        margin-top: 5%;
+    }
+    
     /*Contact page*/
     .contactFormContainer {
         position: relative;
@@ -528,6 +551,10 @@
         margin-bottom: 5%;
     }
 
+    .contactPageFooter {
+        margin-top: 0;
+    }
+    
     .contactPageFooter p {
         position: relative;
         left: 0;

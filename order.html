@@ -9,9 +9,10 @@
         <link rel="stylesheet" href='styles.css'>
         <link rel="stylesheet/less" type="text/css" href='styles.less'>
         <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
-        <script src='scripts/orders.js'></script>
+        <script src="data/Meals.js"></script>
+        <script type="text/javascript" src='scripts/orders.js'></script>
     </head>
-    <body>
+    <body onload="defineVars()">
         <div class="phoneNav" onclick="expand()">
             <div></div>
             <div></div>
@@ -30,85 +31,12 @@
         </div>
 
         <div class="order-main-contaier">
-            <div id="orders">
-                <h2>Take away menu</h2>
+            <h2>Take away menu</h2>
+            <div id="orders"></div>
 
-                <div id="apptizers">
-                    <h3>Appetizers</h3>
-                    <div>
-                        <p>Soup</p>
-                        <p>&#36;2.99</p>
-                        <button id="add">+</button>
-                        <button id="remove">-</button>
-                    </div>
-
-                    <div>
-                        <p>Salad</p>
-                        <p>&#36;4.25</p>
-                        <button id="add">+</button>
-                        <button id="remove">-</button>
-                    </div>
-
-                    <div>
-                        <p>Spring role</p>
-                        <p>&#36;6.15</p>
-                        <button id="add">+</button>
-                        <button id="remove">-</button>
-                    </div>
-                </div>
-
-                <div id="main">
-                    <h3>Main</h3>
-                    <div>
-                        <p>Steak</p>
-                        <p>&#36;20.99</p>
-                        <button id="add">+</button>
-                        <button id="remove">-</button>
-                    </div>
-
-                    <div>
-                        <p>Chicken and rice</p>
-                        <p>&#36;18.25</p>
-                        <button id="add">+</button>
-                        <button id="remove">-</button>
-                    </div>
-
-                    <div>
-                        <p>Spaghetti</p>
-                        <p>&#36;16.99</p>
-                        <button id="add">+</button>
-                        <button id="remove">-</button>
-                    </div>
-                </div>
-
-                <div id="dessert">
-                    <h3>Dessert</h3>
-                    <div>
-                        <p>Cheesecake</p>
-                        <p>&#36;12.25</p>
-                        <button id="add">+</button>
-                        <button id="remove">-</button>
-                    </div>
-
-                    <div>
-                        <p>Chocolate cake</p>
-                        <p>&#36;14.99</p>
-                        <button id="add">+</button>
-                        <button id="remove">-</button>
-                    </div>
-
-                    <div>
-                        <p>Ice cream</p>
-                        <p>&#36;8.15</p>
-                        <button id="add">+</button>
-                        <button id="remove">-</button>
-                    </div>
-                </div>
+            <div id="total">
+                <p>Total $0</p>
             </div>
-        </div>
-        
-        <div id="total">
-            <p>Total</p>
         </div>
 
         <footer>
