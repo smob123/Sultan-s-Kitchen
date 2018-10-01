@@ -491,6 +491,33 @@
     }
     
     /*Order page*/
+    #order-content {
+        display: flex;
+    }
+    
+    #orders {
+        width: 50%;
+    }
+    
+    #orders * {
+        text-align: left;
+    }
+    
+    #orders img {
+        width: 25%;
+    }
+    
+    .menu-items {
+        display: flex;
+        margin-bottom: 5%;
+    }
+    
+    #orders h3 {
+        margin-bottom: 5%;
+        margin-top: 3%;
+        text-align: center;
+    }
+    
     #add {
         background-color: white;
         border-radius: 50px;
@@ -511,8 +538,15 @@
         cursor: pointer;
     }
     
-    #total {
-        margin-top: 5%;
+    #ordered-items div {
+        position: fixed;
+        bottom: 0;
+        z-index: 1;
+    }
+    
+    #checkout {
+        position: fixed;
+        bottom: 0;
     }
     
     /*Contact page*/
