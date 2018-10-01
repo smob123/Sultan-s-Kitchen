@@ -8,11 +8,8 @@
         <link type="icon/favicon" href="images/logo.ico" rel="icon">
         <link rel="stylesheet" href='styles.css'>
         <link rel="stylesheet/less" type="text/css" href='styles.less'>
-        <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
-        <script src="data/Meals.js"></script>
-        <script type="text/javascript" src='scripts/orders.js'></script>
     </head>
-    <body onload="defineVars()">
+    <body>
         <div class="phoneNav" onclick="expand()">
             <div></div>
             <div></div>
@@ -32,15 +29,26 @@
 
         <div class="order-main-contaier">
             <h2>Take away menu</h2>
-            <div id="orders"></div>
+            <div id="order-content">
 
-            <div id="total">
-                <p>Total $0</p>
+                <div id="orders"></div>
+
+                <div id="ordered-items">
+                    <div id="item-list"></div>
+                    <div id="checkout">
+                        <p id="total">Total $0</p>
+                        <button>Checkout</button>
+                    </div>
+                </div>
             </div>
         </div>
 
         <footer>
             <p>Sultan's Kitchen &COPY;</p>
         </footer>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+        <script src="data/Meals.js"></script>
+        <script type="text/javascript" src='scripts/orders.js'></script>
     </body>
 </html>
