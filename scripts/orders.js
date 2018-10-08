@@ -37,18 +37,18 @@ function updateTotalValue() {
 function generateMenu() {
     menuItems.getMealArray().forEach((item, index) => {
         container.innerHTML +=
-                `<div class='menu-items' >
+            `<div class='menu-items' >
             <h3> ${menuItems.getMealArray()[index].class} </h3>`
 
         for (let j = 0; j < menuItems.getMealArray()[index].meals.length; j++) {
             container.innerHTML +=
-                    `<div class='menu-items'>
+                `<div class='menu-items'>
                     <div>
                         <p> ${menuItems.getMealArray()[index].meals[j][1]} </p>
                         <img src='${menuItems.getMealArray()[index].meals[j][0]}'/>
                     </div>
             
-                    <div>
+                    <div id='add-remove-buttons'>
                         <p> ${menuItems.getMealArray()[index].meals[j][2]} </p>
                         <button id='add' onclick="addToOrder( '${menuItems.getMealArray()[index].meals[j][2]}' , 
                         '${menuItems.getMealArray()[index].meals[j][1]}')"> + </button>

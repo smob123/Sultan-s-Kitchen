@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Contact us</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="images/logo.ico" rel="icon">
-        <link href="styles.css" rel="stylesheet">
-        <script src="scripts/contact.js"></script>
-    </head>
-    <body>
+
+<head>
+    <title>Contact us</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="images/logo.ico" rel="icon">
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class='header'>
         <div class="phoneNav" onclick="expand()">
             <div></div>
             <div></div>
@@ -16,18 +18,31 @@
         </div>
 
         <nav id='mainNav'>
-            <a href='index.html'><p>Home</p></a>
-            <a href="menus/Menu.pdf" target="_blank"><p>Menu</p></a>
-            <a href="Contact us.html"><p>Contact us</p></a>
+            <div>
+                <a href='index.html'>
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="mid-nav-element">
+                <a href="menus/Menu.pdf" target="_blank">
+                    <p>Menu</p>
+                </a>
+            </div>
+            <div>
+                <a href="Contact us.html">
+                    <p>Contact us</p>
+                </a>
+            </div>
         </nav>
 
-        <div class='header'>
-                <h1 class="welcome">Contact us</h1>
+        <div class="header-content">
+            <h1>Contact us</h1>
         </div>
+    </div>
 
-        <div class="contactFormContainer">
-            
-            <form class="contactForm">
+    <div class="contactFormContainer">
+        <form class="contact-form">
+            <div class="content">
                 <h3>Contact us</h3>
 
                 <input placeholder="Name" id="nameBox">
@@ -35,11 +50,17 @@
                 <input placeholder="Phone number" type="tel" id="phoneBox" onblur="validatePhone(this)" required>
                 <textarea placeholder="Message" id="messageBox" required></textarea>
                 <button id="submitButton" onclick="sendData()">Submit</button>
-            </form>
-        </div>
+        </form>
+    </div>
+    </div>
 
-        <footer class="contactPageFooter">
-            <p>Sultan's Kitchen &COPY;</p>
-        </footer>
-    </body>
+    <footer class="contactPageFooter">
+        <p>Sultan's Kitchen &COPY;</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/contact.js"></script>
+</body>
+
 </html>

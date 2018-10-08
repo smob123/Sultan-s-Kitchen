@@ -20,7 +20,6 @@ function sendData() {
 /*
  * highlight empty feilds
  */
-////////////////////////////////////////////
 function validateEmail(email) {
     if (!email.checkValidity() || email.value === "") {
         email.style.border = "2px solid red";
@@ -36,7 +35,6 @@ function validatePhone(phoneNumber) {
         phoneNumber.style.border = "2px solid green";
     }
 }
-/////////////////////////////////////////////
 
 /*
  * list of text feilds
