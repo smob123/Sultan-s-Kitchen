@@ -34,13 +34,10 @@ $(function () {
  */
 
 function expand() {
-    if (!expanded) {
-        document.getElementById("mainNav").style.display = "inline";
-        expanded = true;
-    } else {
-        document.getElementById("mainNav").style.display = "none";
-        expanded = false;
-    }
+    !expanded ? $("#mainNav").css({ "opacity": "1", "transform": "translateX(0%)" })
+        : $("#mainNav").css({ "opacity": "0", "transform": "translateX(-100%)" });
+
+    expanded = !expanded;
 }
 
 /*

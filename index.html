@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Sultan's Kitchen</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link type="icon/favicon" href="images/logo.ico" rel="icon">
-        <link rel="stylesheet" href='styles.css'>
-        <link rel="stylesheet/less" type="text/css" href='styles.less'>
-        <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
-        <script src='scripts/script.js'></script>
-    </head>
-    <body onresize="displayNavMenu()">
+
+<head>
+    <title>Sultan's Kitchen</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="icon/favicon" href="images/logo.ico" rel="icon">
+    <link rel="stylesheet" href='styles.css'>
+    <link rel="stylesheet/less" type="text/css" href='styles.less'>
+</head>
+
+<body>
+    <div class='header'>
         <div class="phoneNav" onclick="expand()">
             <div></div>
             <div></div>
@@ -18,80 +19,95 @@
         </div>
 
         <nav id='mainNav'>
-            <a href='index.html'><p>Home</p></a>
-            <a href="menus/Menu.pdf" target="_blank"><p>Menu</p></a>
-            <a href="Contact us.html"><p>Contact us</p></a>
+            <div>
+                <a href='index.html'>
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="mid-nav-element">
+                <a href="menus/Menu.pdf" target="_blank">
+                    <p>Menu</p>
+                </a>
+            </div>
+            <div>
+                <a href="Contact us.html">
+                    <p>Contact us</p>
+                </a>
+            </div>
         </nav>
 
-
-        <div class='header'>
-            <h1 class="welcome">Welcome to Sultan's Kitchen</h1>
+        <div class="header-content">
+            <h1>Welcome to Sultan's Kitchen</h1>
             <a href="order.html">
                 <button class="order">Order now</button>
             </a>
         </div>
-
-        <section class='about-us'>
+    </div>
+    <section class='about-us'>
+        <div class="content">
             <h2 id='about-heading'>About us</h2>
-            
-            <div class="first-div">
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer porttitor augue at nisl aliquet pulvinar.
-                </p>
+
+            <div class="about-us-content">
                 <img class='about-img' src='images/about-img.jpg' alt='image' align="middle">
-            </div>
-
-            <div class="second-div">
                 <p>
-                    Proin commodo eleifend nibh, nec vehicula augue condimentum vitae.
+                    Ut a posuere sem. Duis quis est et ipsum convallis tincidunt. Class aptent taciti
+                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ac
+                    mauris ultricies, dictum eros dignissim, interdum orci. Morbi eleifend laoreet neque
+                    et sagittis. Sed vulputate arcu vitae semper aliquet. Pellentesque nec arcu ut
+                    turpis tempor auctor ut sed nulla. Sed id purus a dolor mattis rhoncus. Phasellus
+                    sit amet erat dignissim, rutrum est non, mattis magna. Donec placerat dolor erat,
+                    ac congue diam tincidunt eu. Nulla facilisi. Aenean ut pulvinar nibh, vitae ornare
+                    est. Suspendisse ac neque et nulla ullamcorper suscipit in eget magna. Maecenas non
+                    purus sem. Praesent quis volutpat nibh.
                 </p>
-                <img src="images/about-img2.jpg" alt="about-img2" class="about-img2" align="middle">
             </div>
-        </section>
+        </div>
+    </section>
 
-        <div class="line"></div>
+    <hr />
 
-        <section class='menuDiv'>
+    <section class='menuDiv'>
+        <div class="content">
             <h2>Our menu</h2>
 
             <div id="menus">
-                <div class="breakdastContainer">
-                    <div id="breakfast-img">
-                        <a href='menus/Breakfast.pdf' target='_blank'>
-                            <div 
-                                class="overlay">
+                <div class="menu-item">
+                    <div class="breakfast">
+                        <div class="menu-overlay">
+                            <a href='menus/Breakfast.pdf' target='_blank'>
                                 <p>Breakfast</p>
-                            </div>
-                        </a>
+                            </a>
+                        </div>
                     </div>
-
                 </div>
 
-                <div class="lunchContainer">
-                    <div id="lunch-img">
-                        <a href="menus/Lunch.pdf" target="_blank">
-                            <div class="overlay">
+                <div class="menu-item">
+                    <div class="lunch">
+                        <div class="menu-overlay">
+                            <a href="menus/Lunch.pdf" target="_blank">
                                 <p>Lunch</p>
-                            </div>
+                        </div>
                         </a>
                     </div>
                 </div>
 
-                <div class="dinnerContainer">
-                    <div id="dinner-img">
-                        <a href="menus/Dinner.pdf" target="_blank">
-                            <div class="overlay">
+                <div class="menu-item">
+                    <div class="dinner">
+                        <div class="menu-overlay">
+                            <a href="menus/Dinner.pdf" target="_blank">
                                 <p>Dinner</p>
-                            </div>
+                        </div>
                         </a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section class="contactContainer">
+    <section class="contactContainer">
+        <div class="content">
             <h2>Contact us</h2>
-            
+
             <div class="contactDiv">
                 <div class='info'>
                     <h3>Phone or e-mail</h3>
@@ -103,13 +119,17 @@
                 <div class='location'>
                     <h3>Our location</h3>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11355.553053178372!2d-63.577522287048325!3d44.640200640182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1519272371336"
-                            width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                        frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+    <footer>
+        <p>Sultan's Kitchen &COPY;</p>
+    </footer>
 
-        <footer>
-            <p>Sultan's Kitchen &COPY;</p>
-        </footer>
-    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src='scripts/script.js'></script>
+</body>
+
 </html>
