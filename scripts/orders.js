@@ -1,10 +1,12 @@
 const menuItems = new Meals();
+const orders = [];
 const total = document.getElementById('total');
 let totalPrice = 0;
 let container = document.getElementById('orders');
 const apDiv = document.getElementById('apptizers-content');
 const mainDiv = document.getElementById('main-content');
 const dessertDiv = document.getElementById('dessert-content');
+const itemList = document.getElementById('item-list');
 
 generateMenu();
 updateTotalValue();
@@ -16,6 +18,10 @@ let d = menuItems.getMealArray()[2];
 let cart = [];
 
 function addToOrder(price, name) {
+    orders.push(`<div>
+    <span>${name} ${price}</span>
+ <button id='remove' onClcik='removeFromOrder(${parseInt(price)})'>-</button></div>`);
+    itemList.innerHTML += orders[orders.length - 1];
     totalPrice += parseFloat(price);
     updateTotalValue();
     cart.push([name, price]);

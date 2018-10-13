@@ -30,7 +30,7 @@
                 </a>
             </div>
             <div>
-                <a href="Contact us.html">
+                <a href="index.html#contactContainer">
                     <p>Contact us</p>
                 </a>
             </div>
@@ -45,38 +45,40 @@
     </div>
     <section class='about-us'>
         <div class="content">
-            <h2 id='about-heading'>About us</h2>
-
             <div class="about-us-content">
-                <img class='about-img' src='images/about-img.jpg' alt='image' align="middle">
-                <p>
-                    Ut a posuere sem. Duis quis est et ipsum convallis tincidunt. Class aptent taciti
-                    sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ac
-                    mauris ultricies, dictum eros dignissim, interdum orci. Morbi eleifend laoreet neque
-                    et sagittis. Sed vulputate arcu vitae semper aliquet. Pellentesque nec arcu ut
-                    turpis tempor auctor ut sed nulla. Sed id purus a dolor mattis rhoncus. Phasellus
-                    sit amet erat dignissim, rutrum est non, mattis magna. Donec placerat dolor erat,
-                    ac congue diam tincidunt eu. Nulla facilisi. Aenean ut pulvinar nibh, vitae ornare
-                    est. Suspendisse ac neque et nulla ullamcorper suscipit in eget magna. Maecenas non
-                    purus sem. Praesent quis volutpat nibh.
-                </p>
+                <div>
+                    <img class='about-img' src='images/about-img.jpg' alt='image'>
+                </div>
+
+                <div>
+                    <h2 id='about-heading'>About us</h2>
+                    <hr />
+                    <p>
+                        Ut a posuere sem. Duis quis est et ipsum convallis tincidunt. Class aptent taciti
+                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ac
+                        mauris ultricies, dictum eros dignissim, interdum orci. Morbi eleifend laoreet neque
+                        et sagittis. Sed vulputate arcu vitae semper aliquet. Pellentesque nec arcu ut
+                        turpis tempor auctor ut sed nulla. Sed id purus a dolor mattis rhoncus. Phasellus
+                        sit amet erat dignissim, rutrum est non, mattis magna. Donec placerat dolor erat,
+                        ac congue diam tincidunt eu. Nulla facilisi. Aenean ut pulvinar nibh, vitae ornare
+                        est. Suspendisse ac neque et nulla ullamcorper suscipit in eget magna. Maecenas non
+                        purus sem. Praesent quis volutpat nibh.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <hr />
+    <div class='parallax' id='bar'></div>
 
     <section class='menuDiv'>
         <div class="content">
-            <h2>Our menu</h2>
+            <h2>From the menu</h2>
 
             <div id="menus">
                 <div class="menu-item">
                     <div class="breakfast">
                         <div class="menu-overlay">
-                            <a href='menus/Breakfast.pdf' target='_blank'>
-                                <p>Breakfast</p>
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -84,44 +86,79 @@
                 <div class="menu-item">
                     <div class="lunch">
                         <div class="menu-overlay">
-                            <a href="menus/Lunch.pdf" target="_blank">
-                                <p>Lunch</p>
                         </div>
-                        </a>
                     </div>
                 </div>
 
                 <div class="menu-item">
                     <div class="dinner">
                         <div class="menu-overlay">
-                            <a href="menus/Dinner.pdf" target="_blank">
-                                <p>Dinner</p>
                         </div>
-                        </a>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="img4">
+                        <div class="menu-overlay">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="img5">
+                        <div class="menu-overlay">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="img6">
+                        <div class="menu-overlay">
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="contactContainer">
-        <div class="content">
+    <div class='parallax' id='par3'></div>
+
+    <section id="contactContainer">
+        <div id="content">
             <h2>Contact us</h2>
 
             <div class="contactDiv">
-                <div class='info'>
-                    <h3>Phone or e-mail</h3>
-                    <p>Phone number: 902-999-9999</p>
-                    <p>E-mail: inquiry@sultanskitchen.ca</p>
-                    <img src="images/logo.png" alt="logo" class="icon">
-                </div>
-
                 <div class='location'>
                     <h3>Our location</h3>
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11355.553053178372!2d-63.577522287048325!3d44.640200640182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1519272371336"
                         frameborder="0" style="border:0" allowfullscreen></iframe>
                 </div>
+
+                <div class='info'>
+                    <div>
+                        <h3>Phone or e-mail</h3>
+                        <p>Phone number: 902-999-9999</p>
+                        <p>E-mail: inquiry@sultanskitchen.ca</p>
+                        <img src="images/logo.png" alt="logo" class="icon">
+                    </div>
+
+                    <div class="contactFormContainer">
+                        <form class="contact-form">
+                            <div class="content">
+                                <h3>Contact us</h3>
+
+                                <input placeholder="Name" id="nameBox">
+                                <input placeholder="E-mail" id="emailBox" type="email" onblur="validateEmail(this)"
+                                    required>
+                                <input placeholder="Phone number" type="tel" id="phoneBox" onblur="validatePhone(this)"
+                                    required>
+                                <textarea placeholder="Message" id="messageBox" required></textarea>
+                                <button id="submitButton" onclick="sendData()">Submit</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </section>
     <footer>
