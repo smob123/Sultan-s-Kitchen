@@ -46,13 +46,143 @@
         <h2>Take away menu</h2>
         <div id="order-content">
 
-            <div id="orders"></div>
+            <div id="orders">
+                <div class='menu-item-container'>
+                    <hr />
+                    <h3> Appetizers </h3>
+                    <hr />
+                    <div class='category'>
+                        <div class='menu-items'>
+                            <div>
+                                <p> Soup </p>
+                                <img src='images/soup.jpg' />
+                            </div>
+
+                            <div id='add-remove-buttons'>
+                                <p> $2.99 </p>
+                                <button id='add' onclick="addToOrder( '2.99' , 'Soup')"> + </button>
+                            </div>
+                        </div>
+
+                        <div class='menu-items'>
+                            <div>
+                                <p> Salad </p>
+                                <img src='images/salad.jpg' />
+                            </div>
+
+                            <div id='add-remove-buttons'>
+                                <p> $4.25 </p>
+                                <button id='add' onclick="addToOrder( '4.25' , 'Salad')"> + </button>
+                            </div>
+                        </div>
+
+                        <div class='menu-items'>
+                            <div>
+                                <p> Spring roll </p>
+                                <img src='images/spring roll.jpg' />
+                            </div>
+
+                            <div id='add-remove-buttons'>
+                                <p> $6.25 </p>
+                                <button id='add' onclick="addToOrder( '6.15' , 'Spring roll')"> + </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='menu-item-container'>
+                    <hr />
+                    <h3> Main </h3>
+                    <hr />
+                    <div class='category'>
+                        <div class='menu-items'>
+                            <div>
+                                <p> Steak </p>
+                                <img src='images/steak.jpg' />
+                            </div>
+
+                            <div id='add-remove-buttons'>
+                                <p> $20.99 </p>
+                                <button id='add' onclick="addToOrder( '20.99' , 'Steak')"> + </button>
+                            </div>
+                        </div>
+
+                        <div class='menu-items'>
+                            <div>
+                                <p> Chicken and rice </p>
+                                <img src='images/chicken & rice.jpg' />
+                            </div>
+
+                            <div id='add-remove-buttons'>
+                                <p> $18.25 </p>
+                                <button id='add' onclick="addToOrder( '18.25' , 'Chicken and rice')"> + </button>
+                            </div>
+                        </div>
+
+                        <div class='menu-items'>
+                            <div>
+                                <p> Spaghetti </p>
+                                <img src='images/spaghetti.jpg' />
+                            </div>
+
+                            <div id='add-remove-buttons'>
+                                <p> $16.99 </p>
+                                <button id='add' onclick="addToOrder( '16.99' , 'Spaghetti')"> + </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class='menu-item-container'>
+                    <hr />
+                    <h3> Dessert </h3>
+                    <hr />
+                    <div class='category'>
+                        <div class='menu-items'>
+                            <div>
+                                <p> Cheesecake </p>
+                                <img src='images/cheesecake.jpg' />
+                            </div>
+
+                            <div id='add-remove-buttons'>
+                                <p> $12.25 </p>
+                                <button id='add' onclick="addToOrder( '12.25' , 'Cheesecake')"> + </button>
+                            </div>
+                        </div>
+
+                        <div class='menu-items'>
+                            <div>
+                                <p> Chocolate cake </p>
+                                <img src='images/chocolate cake.jpg' />
+                            </div>
+
+                            <div id='add-remove-buttons'>
+                                <p> $14.99 </p>
+                                <button id='add' onclick="addToOrder( '14.99' , 'Chocolate cake')"> + </button>
+                            </div>
+                        </div>
+
+                        <div class='menu-items'>
+                            <div>
+                                <p> Ice cream </p>
+                                <img src='images/icecream.jpg' />
+                            </div>
+
+                            <div id='add-remove-buttons'>
+                                <p> $8.15 </p>
+                                <button id='add' onclick="addToOrder( '8.15' , 'Ice cream')"> + </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div id="ordered-items">
                 <div id="item-list"></div>
                 <div id="checkout">
                     <p id="total">Total $0</p>
                     <button>Checkout</button>
+                    <p>Online ordering is not avialable at the moment</p>
                 </div>
             </div>
         </div>
