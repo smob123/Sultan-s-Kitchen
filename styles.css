@@ -422,31 +422,39 @@ footer {
     }
     /* order.html */
     #order-content {
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
         display: flex;
+        width: 80%;
     }
     #orders {
-        width: 45%;
-        margin-left: 5%;
+        width: 60%;
+        border-radius: 10px;
+        border: 1px solid black;
     }
-    #orders * {
-        text-align: left;
-    }
-    #orders img {
+    .menu-items img {
         width: 200px;
         height: 150px;
     }
-    #add-remove-buttons {
-        margin-left: 5%;
+    .category {
+        display: flex;
+        flex-wrap: wrap;
     }
     .menu-items {
-        display: flex;
+        width: 45%;
         margin-bottom: 5%;
+        margin-left: 3%;
+        border-radius: 10px;
+        border: 1px solid black;
     }
     #ordered-items {
         width: 50%;
+        border-radius: 10px;
+        border: 1px solid black;
     }
     #item-list {
-        height: 95%;
+        height: 10%;
     }
     #ordered-items div {
         position: relative;
