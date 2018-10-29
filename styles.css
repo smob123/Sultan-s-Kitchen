@@ -101,7 +101,7 @@ a {
 .order {
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    border-radius: 50px;
+    border-radius: 5px;
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
 }
@@ -328,10 +328,18 @@ footer {
 
 /* order.html */
 
+.order-main-contaier {
+    padding-top: 5%;
+    background-color: #f4f4f4;
+}
+
 #orders h3 {
     margin-bottom: 5%;
-    margin-top: 3%;
     text-align: center;
+}
+
+#orders {
+    border-radius: 10px;
 }
 
 #add {
@@ -345,6 +353,7 @@ footer {
 }
 
 #remove {
+    float: right;
     background-color: white;
     border-radius: 50px;
     border: 1px solid black;
@@ -352,6 +361,37 @@ footer {
 
 #remove:hover {
     cursor: pointer;
+}
+
+#ordered-items {
+    padding: 10%;
+    border-radius: 10px;
+}
+
+#item-list {
+    height: 150px;
+    overflow-y: scroll;
+}
+
+#ordered-items div {
+    position: relative;
+    bottom: 0;
+    margin-bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+#checkout button {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 2%;
+}
+
+.red-text {
+    color: #f93939;
 }
 
 @media (min-width: 600px) {
@@ -431,7 +471,6 @@ footer {
     #orders {
         width: 60%;
         border-radius: 10px;
-        background-color: #f4f4f4;
     }
     .menu-items img {
         width: 200px;
@@ -450,23 +489,10 @@ footer {
         background-color: #fff;
     }
     #ordered-items {
+        left: 0;
+        transform: translate(0);
         width: 50%;
-        border-radius: 10px;
-        background-color: #f4f4f4;
-    }
-    #item-list {
-        height: 10%;
-        overflow-y: scroll;
-    }
-    #ordered-items div {
-        position: relative;
-        bottom: 0;
-        left: 30%;
-        border-radius: 10px;
-        border: 1px solid rgba(0, 0, 0, 0.5);
-    }
-    .red-text {
-        color: #f93939;
+        padding: 0;
     }
 }
 
@@ -490,9 +516,9 @@ footer {
     }
     /*Order page*/
     #ordered-items div {
-        width: 50%;
+        width: 70%;
     }
-    .order-main-contaier {
+    #order-content {
         position: relative;
         left: 50%;
         transform: translateX(-50%);
