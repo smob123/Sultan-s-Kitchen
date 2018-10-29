@@ -1,4 +1,3 @@
-const orders = [];
 const total = document.getElementById('total');
 let totalPrice = 0;
 const itemList = document.getElementById('item-list');
@@ -6,25 +5,22 @@ const itemList = document.getElementById('item-list');
 updateTotalValue();
 
 function addToOrder(price, name) {
-    orders.push(`<div>
+    let orders = `<div>
     <span>${name} ${price}</span>
- <button id='remove' onClick='removeFromOrder(${parseFloat(price)}, this)'>-</button></div>`);
-    itemList.innerHTML += orders[orders.length - 1];
+ <button id='remove' onClick='removeFromOrder(${price}, this)'>-</button></div>`;
+    itemList.innerHTML += orders;
     totalPrice += parseFloat(price);
     updateTotalValue();
-    cart.push([name, price]);
 }
 
 function removeFromOrder(price, elem) {
-    const index = orders.indexOf(elem);
-    orders.splice(index, 1);
-    itemList.innerHTML = orders;
+    elem.parentElement.style.display = 'none';
     totalPrice -= price;
     updateTotalValue();
 }
 
 function getTotalPrice() {
-    return totalPrice;
+    return Math.abs(totalPrice);
 }
 
 function updateTotalValue() {
