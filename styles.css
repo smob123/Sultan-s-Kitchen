@@ -338,8 +338,65 @@ footer {
     text-align: center;
 }
 
-#orders {
+.categories {
+    background-color: #777677;
+    margin-bottom: 15%;
+}
+
+.categories div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #efefef;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.categories div:hover {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.categories div span {
+    position: relative;
+    bottom: 50%;
+}
+
+.categories span {
+    display: block;
+    margin-top: 10%;
+    color: #383838;
+    cursor: pointer;
+    transition-duration: 1s;
+    color: #fff;
+}
+
+.menu-items {
+    position: initial;
+    transform: translate(0, 0);
+    width: 45%;
+    margin-bottom: 5%;
+    margin-left: 3%;
+}
+
+#appetizers {
+    display: block;
+}
+
+#main-course,
+#dessert {
+    display: none;
+}
+
+.menu-items {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    width: 90%;
+    margin-bottom: 5%;
     border-radius: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: #fff;
 }
 
 #add {
@@ -468,6 +525,11 @@ footer {
         display: flex;
         width: 80%;
     }
+    .categories {
+        width: 30%;
+        margin-right: 5%;
+        margin-bottom: 0;
+    }
     #orders {
         width: 60%;
         border-radius: 10px;
@@ -479,14 +541,6 @@ footer {
     .category {
         display: flex;
         flex-wrap: wrap;
-    }
-    .menu-items {
-        width: 45%;
-        margin-bottom: 5%;
-        margin-left: 3%;
-        border-radius: 10px;
-        border: 1px solid rgba(0, 0, 0, 0.5);
-        background-color: #fff;
     }
     #ordered-items {
         left: 0;

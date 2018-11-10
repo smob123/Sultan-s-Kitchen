@@ -46,8 +46,26 @@
         <h2>Take away menu</h2>
         <div id="order-content">
 
+            <div class='categories'>
+                <div onclick="showItems('appetizers')">
+                    <span>
+                        Appetizers
+                    </span>
+                </div>
+                <div onclick="showItems('main-course')">
+                    <span>
+                        Main
+                    </span>
+                </div>
+                <div onclick="showItems('dessert')">
+                    <span>
+                        Dessert
+                    </span>
+                </div>
+            </div>
+
             <div id="orders">
-                <div class='menu-item-container'>
+                <div class='menu-item-container' id='appetizers'>
                     <hr />
                     <h3> Appetizers </h3>
                     <hr />
@@ -90,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class='menu-item-container'>
+                <div class='menu-item-container' id='main-course'>
                     <hr />
                     <h3> Main </h3>
                     <hr />
@@ -133,7 +151,7 @@
                     </div>
                 </div>
 
-                <div class='menu-item-container'>
+                <div class='menu-item-container' id='dessert'>
                     <hr />
                     <h3> Dessert </h3>
                     <hr />

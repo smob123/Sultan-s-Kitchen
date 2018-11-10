@@ -1,8 +1,16 @@
+const categories = ['appetizers', 'main-course', 'dessert'];
 const total = document.getElementById('total');
 let totalPrice = 0;
 const itemList = document.getElementById('item-list');
 
 updateTotalValue();
+
+function showItems(id) {
+    categories.forEach((item, index) => {
+        item === id ? document.getElementById(item).style.display = 'block' :
+            document.getElementById(item).style.display = 'none';
+    });
+}
 
 function addToOrder(price, name) {
     let orders = `<div>
