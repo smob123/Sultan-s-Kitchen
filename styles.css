@@ -533,14 +533,21 @@ footer {
     #orders {
         width: 60%;
         border-radius: 10px;
-    }
-    .menu-items img {
-        width: 200px;
-        height: 150px;
+        margin-left: 8%;
     }
     .category {
         display: flex;
         flex-wrap: wrap;
+    }
+    .menu-items {
+        position: initial;
+        transform: translateX(0);
+        flex: 0 45%;
+        width: 50%;
+    }
+    .menu-items img {
+        width: 200px;
+        height: 150px;
     }
     #ordered-items {
         left: 0;
