@@ -7,156 +7,321 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="icon/favicon" href="images/logo.ico" rel="icon">
     <link rel="stylesheet" href='styles.css'>
-    <link rel="stylesheet/less" type="text/css" href='styles.less'>
 </head>
 
 <body>
     <div class='header'>
-        <div class="phoneNav" onclick="expand()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
+        <div class='header-overlay'></div>
+        <div class='title-bar'>
+            <div class='title-container'>
+                <a href=''><span>Sultan's Kitchen</span></a>
+            </div>
+            <div>
+                <div class="phoneNav" onclick="expand()">
+                    <div id='bar1'></div>
+                    <div id='bar2'></div>
+                    <div id='bar3'></div>
+                </div>
 
-        <nav id='mainNav'>
-            <div>
-                <a href='index.html'>
-                    <p>Home</p>
-                </a>
+                <nav id='mainNav'>
+                    <div>
+                        <p>Home</p>
+                    </div>
+                    <div class="mid-nav-element">
+                        <p>Menu</p>
+                    </div>
+                    <div>
+                        <p>Contact</p>
+                    </div>
+                </nav>
             </div>
-            <div class="mid-nav-element">
-                <a href="menus/Menu.pdf" target="_blank">
-                    <p>Menu</p>
-                </a>
-            </div>
-            <div>
-                <a href="index.html#contactContainer">
-                    <p>Contact us</p>
-                </a>
-            </div>
-        </nav>
+        </div>
 
         <div class="header-content">
             <h1>Welcome to Sultan's Kitchen</h1>
-            <a href="order.html">
-                <button class="order">Order now</button>
-            </a>
+            <span>There is first love and there is kithen love</span>
+            <button class="order">Order now</button>
         </div>
     </div>
     <section class='about-us'>
         <div class="content">
             <div class="about-us-content">
-                <div>
-                    <img class='about-img' src='images/about-img.jpg' alt='image'>
-                </div>
+                <div class='about-txt'>
+                    <p>OUR STORY</p>
+                    <h2 id='about-heading'>Welcome</h2>
+                    <p>Image Shall stars every gathering kind said image morning upon don&#39;t. Our midst over of be
+                        she&#39;d had the let male make place it so.</p>
 
-                <div>
-                    <h2 id='about-heading'>About us</h2>
-                    <hr />
-                    <p>
-                        Ut a posuere sem. Duis quis est et ipsum convallis tincidunt. Class aptent taciti
-                        sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ac
-                        mauris ultricies, dictum eros dignissim, interdum orci. Morbi eleifend laoreet neque
-                        et sagittis. Sed vulputate arcu vitae semper aliquet. Pellentesque nec arcu ut
-                        turpis tempor auctor ut sed nulla. Sed id purus a dolor mattis rhoncus. Phasellus
-                        sit amet erat dignissim, rutrum est non, mattis magna. Donec placerat dolor erat,
-                        ac congue diam tincidunt eu. Nulla facilisi. Aenean ut pulvinar nibh, vitae ornare
-                        est. Suspendisse ac neque et nulla ullamcorper suscipit in eget magna. Maecenas non
-                        purus sem. Praesent quis volutpat nibh.
-                    </p>
+                    <p>Gathered them signs saw. Behold so midst created living doesn&#39;t so likeness wherein said to
+                        lights after cattle called also male sixth was male rule.</p>
+
+                    <button>Learn More</button>
+                </div>
+                <div class='about-img'>
+                    <img src='images/chef.jpg' alt='image'>
                 </div>
             </div>
         </div>
     </section>
-
-    <div class='parallax' id='bar'></div>
 
     <section class='menuDiv'>
         <div class="content">
-            <h2>From the menu</h2>
+            <p>OUR OFFERS</p>
+            <h2>Our Offers This Week</h2>
+            <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness a won&#39;t,
+                deep.</p>
 
-            <div id="menus">
-                <div class="menu-item">
-                    <div class="breakfast">
-                        <div class="menu-overlay">
-                        </div>
+            <div id="offers">
+                <div class="offer-item">
+                    <div>
+                        <img src='images/steak.jpg' alt='steak' />
+                    </div>
+
+                    <div>
+                        <p class='price'>$15.99</p>
+                        <h4>Steak</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <button class='order-button'>Order Now</button>
                     </div>
                 </div>
 
-                <div class="menu-item">
-                    <div class="lunch">
-                        <div class="menu-overlay">
-                        </div>
+                <div class="offer-item">
+                    <div>
+                        <img src='images/img6.jpeg' alt='burger' />
+                    </div>
+
+                    <div>
+                        <p class='price'>$19.25</p>
+                        <h4>Burger & Fries</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <button class='order-button'>Order Now</button>
                     </div>
                 </div>
 
-                <div class="menu-item">
-                    <div class="dinner">
-                        <div class="menu-overlay">
-                        </div>
+                <div class="offer-item">
+                    <div>
+                        <img src='images/img5.jpg' alt='starters' />
+                    </div>
+
+                    <div>
+                        <p class='price'>$9.99</p>
+                        <h4>Starters</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <button class='order-button'>Order Now</button>
                     </div>
                 </div>
+    </section>
 
-                <div class="menu-item">
-                    <div class="img4">
-                        <div class="menu-overlay">
-                        </div>
+    <section id='menu-section'>
+        <h1>Our Menu</h1>
+        <p class='sub-heading'>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
+            likeness
+            a won&#39;t,
+            deep.</p>
+        <div class='menu-content'>
+            <div class='menu-types'>
+                <button onclick="showMealType('#breakfast', this)" id='breakfast-button' class='menu-types-active'>Breakfast</button>
+                <button onclick="showMealType('#lunch', this)" id='lunch-button' class='menu-types-default'>Lunch</button>
+                <button onclick="showMealType('#dinner', this)" id='dinner-button' class='menu-types-default'>Dinner</button>
+            </div>
+            <div id='breakfast' class='menu-type-div'>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/egg.jpg' alt='fried eggs' />
+                    </div>
+                    <div>
+                        <h4>Fried eggs</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$15.25</p>
                     </div>
                 </div>
-
-                <div class="menu-item">
-                    <div class="img5">
-                        <div class="menu-overlay">
-                        </div>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/pancakes.jpg' alt='pancakes' />
+                    </div>
+                    <div>
+                        <h4>Pancakes</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$29.99</p>
                     </div>
                 </div>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/waffles.jpg' alt='waffles' />
+                    </div>
+                    <div>
+                        <h4>Waffles</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$22.75</p>
+                    </div>
+                </div>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/oatmeal.jpg' alt='oatmeal' />
+                    </div>
+                    <div>
+                        <h4>Oatmeal</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
+                            likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$15.30</p>
+                    </div>
+                </div>
+            </div>
 
-                <div class="menu-item">
-                    <div class="img6">
-                        <div class="menu-overlay">
-                        </div>
+            <div id='lunch' class='menu-type-div'>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/chicken & rice.jpg' alt='mediterranean chicken' />
+                    </div>
+                    <div>
+                        <h4>Mediterranean Chicken</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$30.75</p>
+                    </div>
+                </div>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/img4.jpg' alt='burritos' />
+                    </div>
+                    <div>
+                        <h4>Burritos</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$20.15</p>
+                    </div>
+                </div>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/spaghetti.jpg' alt='spaghetti' />
+                    </div>
+                    <div>
+                        <h4>Spaghetti</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$24.25</p>
+                    </div>
+                </div>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/steak_menu.jpg' alt='steak' />
+                    </div>
+                    <div>
+                        <h4>Steak</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
+                            likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$35.25</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id='dinner' class='menu-type-div'>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/burger&fries.jpg' alt='burger and fries' />
+                    </div>
+                    <div>
+                        <h4>Mediterranean Chicken</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$30.75</p>
+                    </div>
+                </div>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/foodP.jpg' alt='shrimp sandwich' />
+                    </div>
+                    <div>
+                        <h4>Shrimp Sandwich</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$30.15</p>
+                    </div>
+                </div>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/spaghetti.jpg' alt='spaghetti' />
+                    </div>
+                    <div>
+                        <h4>Spaghetti</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$24.25</p>
+                    </div>
+                </div>
+                <div class='menu-item'>
+                    <div class='circular-img-div'>
+                        <img src='images/steak_menu.jpg' alt='steak' />
+                    </div>
+                    <div>
+                        <h4>Steak</h4>
+                        <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
+                            likeness
+                            a won&#39;t,
+                            deep.</p>
+                        <p class='price'>$35.25</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <div class='parallax' id='par3'></div>
-
     <section id="contactContainer">
         <div class="content">
-            <h2>Contact us</h2>
+            <h2>Get in touch</h2>
+            <p class='sub-heading'>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
+                likeness
+                a won&#39;t,
+                deep.</p>
 
             <div class="contactDiv">
-                <div class='location'>
-                    <h3>Our location</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11355.553053178372!2d-63.577522287048325!3d44.640200640182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1519272371336"
-                        frameborder="0" style="border:0" allowfullscreen></iframe>
-                </div>
-
                 <div class='info'>
-                    <div>
-                        <h3>Phone or e-mail</h3>
-                        <p>Phone number: 902-999-9999</p>
-                        <p>E-mail: inquiry@sultanskitchen.ca</p>
-                        <img src="images/logo.png" alt="logo" class="icon">
-                    </div>
-
                     <div class="contactFormContainer">
                         <form class="contact-form">
                             <div class="content">
-                                <h3>Contact us</h3>
-
                                 <input placeholder="Name" id="nameBox">
                                 <input placeholder="E-mail" id="emailBox" type="email" onblur="validateEmail(this)"
                                     required>
                                 <input placeholder="Phone number" type="tel" id="phoneBox" onblur="validatePhone(this)"
                                     required>
                                 <textarea placeholder="Message" id="messageBox" required></textarea>
-                                <button id="submitButton" onclick="sendData()">Submit</button>
+                                <button id="submitButton" onclick="sendData()">Send</button>
                         </form>
                     </div>
                 </div>
+
+                <div>
+                    <img src='images/chef2.jpg' alt='chef' />
+                    <p>Phone number: 902-999-9999</p>
+                    <p>E-mail: inquiry@sultanskitchen.ca</p>
+                </div>
+            </div>
+
+            <div class='location'>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11355.553053178372!2d-63.577522287048325!3d44.640200640182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1519272371336"
+                    frameborder="0" style="border:0" allowfullscreen></iframe>
             </div>
         </div>
     </section>
@@ -164,7 +329,6 @@
         <p>Sultan's Kitchen &COPY;</p>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
     <script src='scripts/script.js'></script>
 </body>
 

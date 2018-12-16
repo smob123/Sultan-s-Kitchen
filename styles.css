@@ -16,6 +16,7 @@ body {
     margin: 0;
     padding: 0;
     text-align: center;
+    overflow-x: hidden;
 }
 
 section,
@@ -37,20 +38,49 @@ a {
 }
 
 .header {
+    position: relative;
     margin: 0;
     padding: 0;
     height: 100vh;
     width: 100%;
-    background-image: url("images/bar.jpg");
+    background-image: url("images/background-img.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% 100%;
 }
 
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.title-bar {
+    position: relative;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    color: #fff;
+}
+
+.title-container {
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 2%;
+    font-size: 1.5rem;
+}
+
+.title-bar a {
+    text-decoration: none;
+    color: #efefef;
+}
+
 .phoneNav {
     position: absolute;
     top: 5px;
-    left: 5px;
+    right: 10px;
     height: 50px;
     width: 50px;
     z-index: 3;
@@ -58,23 +88,28 @@ a {
 }
 
 .phoneNav * {
+    position: relative;
     background-color: white;
     height: 15%;
     margin-bottom: 15%;
     border-radius: 50px;
+    transition-duration: .5s;
 }
 
 #mainNav {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, #efefef, #778877);
     opacity: 0.7;
-    width: 50%;
+    width: 100%;
     height: 100vh;
-    transform: translateX(-100%);
+    display: grid;
+    place-content: center;
+    transform: translateX(200%);
     transition-duration: 1s;
+    will-change: transform;
     z-index: 1;
 }
 
@@ -82,26 +117,35 @@ a {
     display: block;
     color: white;
     text-decoration: none;
+    transition-duration: .5s;
+    cursor: pointer;
 }
 
 #mainNav p:hover {
-    color: gold;
+    color: orange;
 }
 
 .header-content {
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 35%;
+    transform: translateY(-35%);
     color: white;
     border: 1px solid rgba(0, 0, 0, 0);
+    font-size: 1.3rem;
+}
+
+.header-content span {
+    display: block;
+    margin-bottom: 2%;
 }
 
 /* index.html */
 
 .order {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0);
     color: white;
-    border-radius: 5px;
+    border: 2px solid #fff;
+    padding: 15px 40px;
     transition-duration: 1s;
     -webkit-transition-duration: 1s;
 }
@@ -116,142 +160,113 @@ a {
     padding: 5% 0 15% 0;
 }
 
-.about-us img {
+.about-img {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
     width: 90%;
-    border-radius: 5px;
-    filter: drop-shadow(10px 10px 10px black);
-    margin-bottom: 10%;
     padding-top: 10%;
-}
-
-hr {
-    width: 30%;
 }
 
 .about-us p {
     margin-left: 3%;
 }
 
-.parallax {
-    height: 600px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
+.about-txt button {
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid #787878;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition-duration: .5s;
 }
 
-#bar {
-    background-image: url("images/par2.jpeg");
-}
-
-#menus {
-    padding: 10% 0 10% 0;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.menu-item {
-    width: 1%;
-    flex: 0 50%;
-}
-
-.breakfast {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 250px;
-    background-image: url('images/egg.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.lunch {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 250px;
-    background-image: url('images/steak.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.dinner {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 250px;
-    background-image: url('images/burger&fries.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.img4 {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 250px;
-    background-image: url('images/img4.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.img5 {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 250px;
-    background-image: url('images/img5.jpg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.img6 {
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 300px;
-    height: 250px;
-    background-image: url('images/img6.jpeg');
-    background-size: 100% 100%;
-    background-repeat: no-repeat;
-}
-
-.menu-overlay {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    opacity: 0;
-    transition-duration: 1s;
-}
-
-.menu-overlay a {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.menu-overlay p {
+.about-txt button:hover {
+    background-color: orange;
     color: #fff;
 }
 
-.menu-overlay:hover {
-    opacity: 1;
+.price {
+    color: darkorange;
 }
 
-#par3 {
-    background-image: url("images/par3.jpeg");
+.order-button {
+    background-color: orange;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.order-button:hover {
+    background-color: darkorange;
+}
+
+.offer-item {
+    background-color: #fff;
+    padding: 5%;
+}
+
+.menu-types {
+    margin-top: 10%;
+}
+
+.menu-types-default {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 55px;
+    cursor: pointer;
+    border: 2px solid lightgray;
+    color: lightgray;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.menu-types-active {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+    padding: 20px 55px;
+    cursor: pointer;
+    border: 1px solid black;
+    color: #111111;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.menu-type-div {
+    margin-top: 10%;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 10% 10% auto auto;
+}
+
+.circular-img-div {
+    overflow: hidden;
+    margin-right: 10%;
+}
+
+.circular-img-div img {
+    border-radius: 50%;
+}
+
+#lunch,
+#dinner {
+    display: none;
+}
+
+#menu-type-shown {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 #contactContainer {
     position: relative;
-    color: #fff;
-    background-color: #282828;
-    padding-bottom: 5%;
+    color: #787878;
+    background-color: #f4f4f4;
 }
 
 #contactContainer h2 {
@@ -259,18 +274,58 @@ hr {
     padding-top: 10%;
 }
 
-#contactContainer h2,
-#contactContainer p {
-    color: #fff;
-}
-
 #contactContainer img {
     margin-left: 5%;
+}
+
+.contactFormContainer {
+    position: relative;
+}
+
+.contact-form * {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    border: none;
+}
+
+.contactFormContainer input {
+    display: block;
+    width: 60%;
+    margin-bottom: 3%;
+    background-color: #e8e8e8;
+    text-align: left;
+}
+
+#messageBox {
+    display: block;
+    width: 80%;
+    height: 100px;
+    margin-bottom: 5%;
+    resize: none;
+    background-color: #e8e8e8;
+}
+
+#submitButton {
+    width: 30%;
+    margin-bottom: 3%;
+    display: block;
+    background-color: orange;
+    color: #fff;
+    padding: 15px 50px;
+    cursor: pointer;
+    transition-duration: 1s;
+}
+
+#submitButton:hover {
+    background-color: darkorange;
 }
 
 .location iframe {
     width: 100%;
     height: 400px;
+    margin-top: 10%;
 }
 
 footer {
@@ -279,54 +334,35 @@ footer {
     border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.contactFormContainer {
-    background-color: #282828;
-    position: relative;
-    margin: 0;
-}
+/*menu.html
 
-.contact-form * {
+.menu-main-container {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    display: flex;
+    padding-top: 10%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+    max-width: 1500px;
 }
 
-.contactFormContainer h3 {
-    color: #fff;
+.menu-main-container div {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    padding-bottom: 10%;
 }
 
-.contactFormContainer input {
-    display: block;
-    width: 50%;
-    margin-bottom: 3%;
+.menu-main-container div div {
+    flex: 1;
+    align-items: center;
+    justify-content: center;
 }
 
-#messageBox {
-    display: block;
-    width: 60%;
-    height: 50px;
-    margin-bottom: 5%;
-    resize: none;
-}
-
-#submitButton {
-    width: 30%;
-    margin-bottom: 3%;
-    display: block;
-    background-color: rgba(0, 0, 0, 0);
-    color: #efefef;
-    border-radius: 5px;
-    border: 1px solid #efefef;
-    cursor: pointer;
-    transition-duration: 1s;
-}
-
-#submitButton:hover {
-    background-color: #efefef;
-    color: gray;
-}
-
-/* order.html */
+/* order.html
 
 .order-main-contaier {
     padding-top: 5%;
@@ -449,7 +485,7 @@ footer {
 
 .red-text {
     color: #f93939;
-}
+}*/
 
 @media (min-width: 600px) {
     /* index.html */
@@ -457,47 +493,79 @@ footer {
         display: none;
     }
     #mainNav {
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        text-align: left;
+        position: relative;
         width: 100%;
         height: 50px;
         opacity: 1;
         transform: translateX(0);
-        text-align: center;
+        background-image: initial;
     }
-    #mainNav div {
-        display: inline-block;
-    }
-    #mainNav .mid-nav-element {
-        margin: auto 10% auto 10%;
+    .about-us {
+        padding-top: 0;
     }
     .about-us-content {
         display: grid;
         grid-template-columns: 50% 50%;
+        place-content: center;
+        padding: 0 10% 10% 10%;
+    }
+    .about-txt {
+        display: grid;
+        place-content: center;
     }
     #about-heading {
         margin-left: 0;
         padding-left: 0;
-        width: 85%;
+        text-align: left;
+    }
+    .about-txt p {
+        max-width: 80%;
+        text-align: left;
     }
     .about-us img {
-        width: 75%;
-        margin-left: 5%;
-    }
-    .about-us p {
-        max-width: 50%;
-        margin-left: 20%;
+        display: grid;
+        place-content: center;
+        margin-left: 10%;
     }
     .menuDiv {
         position: relative;
-        padding-bottom: 10%;
+        background-color: #f9f9f9;
+        padding: 50px;
     }
-    #menus {
+    #offers {
         display: grid;
         grid-template-columns: 33% 33% 33%;
         padding: 0;
     }
-    .menu-item {
-        width: 90%;
-        margin: 10% 5% 5% 5%;
+    .offer-item {
+        font-size: 1.3rem;
+        margin-top: 10%;
+        margin-right: 5%;
+    }
+    .menu-types-default,
+    .menu-types-active {
+        display: initial;
+        width: initial;
+    }
+    .menu-type-div {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    #menu-section {
+        margin: 0 auto;
+        padding: 50px;
+        max-width: 1200px;
+    }
+    .sub-heading {
+        width: 50%;
+        text-align: center;
+        margin: auto;
+    }
+    .menu-item div p {
+        text-align: left;
     }
     .contactDiv div {
         margin: 0 5% 0 5%;
@@ -505,17 +573,20 @@ footer {
     .info {
         display: grid;
         grid-template-columns: 50% 50%;
-        flex-direction: row-reverse;
         padding-top: 10%;
     }
     #contactContainer h2 {
         padding: 5% 0 5% 0;
     }
-    #contactContainer input {
-        width: 90%;
-    }
+    #contactContainer input,
     #messageBox {
         width: 100%;
+        text-align: left;
+        text-indent: 20px;
+    }
+    #submitButton {
+        left: 0;
+        transform: translateX(0);
     }
     /* order.html */
     #order-content {
@@ -569,10 +640,12 @@ footer {
         padding-bottom: 0;
     }
     #contactContainer input {
-        width: 60%;
+        width: 100%;
+        height: 50px;
     }
     #messageBox {
-        width: 70%;
+        width: 100%;
+        height: 200px;
         display: block;
     }
     /*Order page*/
