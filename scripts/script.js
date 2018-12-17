@@ -1,18 +1,40 @@
+//navigation bar style handeling
+const stickyNav = document.querySelector('.title-bar');
+const navElems = document.querySelectorAll('.title-bar p');
+const titleElem = document.querySelector('.title-bar span');
+let backgroundColor = '';
+let txtColor = '';
+
+if (window.innerWidth >= 600) {
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 0) {
+            backgroundColor = '#fff';
+            txtColor = '#787878';
+        }
+        else {
+            backgroundColor = 'rgba(0, 0, 0, 0)';
+            txtColor = '#fff';
+        }
+
+        stickyNav.style['background-color'] = backgroundColor;
+        titleElem.style['color'] = txtColor;
+        for (const elem of navElems) {
+            elem.style['color'] = txtColor;
+        }
+    });
+}
+
 //phone nav sandwich menu bars
 const bar1 = document.querySelector('#bar1');
 const bar2 = document.querySelector('#bar2');
 const bar3 = document.querySelector('#bar3');
-const nav = document.querySelector('#mainNav');
+const nav = document.querySelector('#main-nav');
 let expanded = false; //checks if the phone nav is expanded
 
 //meal types IDs
-const menuTypes = ['#breakfast', '#lunch', '#dinner'];
-const menuTypesButtons = ['#breakfast-button', '#lunch-button', '#dinner-button'];
+const menuTypes = ['#breakfast-menu-container', '#lunch-menu-container', '#dinner-menu-container'];
 
-/*
- * display side nav when phone div is clicked
- */
-
+//displays side nav when phone div is clicked
 function expand() {
     if (!expanded) {
         bar1.style['transform'] = 'translate(100vw)';
@@ -33,15 +55,28 @@ function expand() {
     expanded = !expanded;
 }
 
-function showMealType(type, button) {
-    button.classList.add('menu-types-active');
+//handles showing different menus
+function showMenu(menuId) {
     menuTypes.forEach((item, index) => {
-        if (type !== item) {
+        if (`#${menuId}` !== item) {
             document.querySelector(item).style['display'] = 'none';
-            document.querySelector(menuTypesButtons[index]).classList.remove('menu-types-active');
-            document.querySelector(menuTypesButtons[index]).classList.add('menu-types-default');
         }
     });
 
-    document.querySelector(type).style['display'] = 'grid';
+    document.querySelector(`#${menuId}`).style['display'] = 'grid';
+}
+
+
+//handles page navigation
+function scrollToSection(secName) {
+    const elem = document.getElementById(secName);
+    console.log(elem);
+    window.scroll({
+        top: elem.offsetTop - 50,
+        behavior: 'smooth'
+    });
+
+    if (window.innerWidth < 600) {
+        expand();
+    }
 }

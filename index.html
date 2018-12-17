@@ -14,7 +14,7 @@
         <div class='header-overlay'></div>
         <div class='title-bar'>
             <div class='title-container'>
-                <a href=''><span>Sultan's Kitchen</span></a>
+                <a href='index.html'><span>Sultan's Kitchen</span></a>
             </div>
             <div>
                 <div class="phoneNav" onclick="expand()">
@@ -23,32 +23,38 @@
                     <div id='bar3'></div>
                 </div>
 
-                <nav id='mainNav'>
+                <nav id='main-nav'>
                     <div>
-                        <p>Home</p>
-                    </div>
-                    <div class="mid-nav-element">
-                        <p>Menu</p>
+                        <p onclick="scrollToSection('header-section')">Home</p>
                     </div>
                     <div>
-                        <p>Contact</p>
+                        <p onclick="scrollToSection('about-section')">About</p>
+                    </div>
+                    <div>
+                        <p onclick="scrollToSection('offers-section')">Offers</p>
+                    </div>
+                    <div>
+                        <p onclick="scrollToSection('menu-section')">Menu</p>
+                    </div>
+                    <div>
+                        <p onclick="scrollToSection('contact-container')">Contact</p>
                     </div>
                 </nav>
             </div>
         </div>
 
-        <div class="header-content">
+        <div class="header-content" id='header-section'>
             <h1>Welcome to Sultan's Kitchen</h1>
             <span>There is first love and there is kithen love</span>
-            <button class="order">Order now</button>
+            <button class='order-btn'>Order now</button>
         </div>
     </div>
-    <section class='about-us'>
+    <section id='about-section'>
         <div class="content">
-            <div class="about-us-content">
-                <div class='about-txt'>
+            <div class="about-section-content">
+                <div class='about-section-txt-container'>
                     <p>OUR STORY</p>
-                    <h2 id='about-heading'>Welcome</h2>
+                    <h2 id='about-section-heading'>Welcome</h2>
                     <p>Image Shall stars every gathering kind said image morning upon don&#39;t. Our midst over of be
                         she&#39;d had the let male make place it so.</p>
 
@@ -57,14 +63,14 @@
 
                     <button>Learn More</button>
                 </div>
-                <div class='about-img'>
+                <div class='about-section-img'>
                     <img src='images/chef.jpg' alt='image'>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class='menuDiv'>
+    <section class='menu-div' id='offers-section'>
         <div class="content">
             <p>OUR OFFERS</p>
             <h2>Our Offers This Week</h2>
@@ -72,48 +78,48 @@
                 deep.</p>
 
             <div id="offers">
-                <div class="offer-item">
+                <div class='offer-container'>
                     <div>
                         <img src='images/steak.jpg' alt='steak' />
                     </div>
 
                     <div>
-                        <p class='price'>$15.99</p>
+                        <p class='orange-txt'>$15.99</p>
                         <h4>Steak</h4>
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <button class='order-button'>Order Now</button>
+                        <button class='order-now-btn'>Order Now</button>
                     </div>
                 </div>
 
-                <div class="offer-item">
+                <div class="offer-container">
                     <div>
                         <img src='images/img6.jpeg' alt='burger' />
                     </div>
 
                     <div>
-                        <p class='price'>$19.25</p>
+                        <p class='orange-txt'>$19.25</p>
                         <h4>Burger & Fries</h4>
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <button class='order-button'>Order Now</button>
+                        <button class='order-now-btn'>Order Now</button>
                     </div>
                 </div>
 
-                <div class="offer-item">
+                <div class="offer-container">
                     <div>
                         <img src='images/img5.jpg' alt='starters' />
                     </div>
 
                     <div>
-                        <p class='price'>$9.99</p>
+                        <p class='orange-txt'>$9.99</p>
                         <h4>Starters</h4>
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <button class='order-button'>Order Now</button>
+                        <button class='order-now-btn'>Order Now</button>
                     </div>
                 </div>
     </section>
@@ -125,12 +131,23 @@
             a won&#39;t,
             deep.</p>
         <div class='menu-content'>
-            <div class='menu-types'>
-                <button onclick="showMealType('#breakfast', this)" id='breakfast-button' class='menu-types-active'>Breakfast</button>
-                <button onclick="showMealType('#lunch', this)" id='lunch-button' class='menu-types-default'>Lunch</button>
-                <button onclick="showMealType('#dinner', this)" id='dinner-button' class='menu-types-default'>Dinner</button>
+            <div class='menu-nav-container'>
+                <input type='radio' id='breakfast-radio-btn' name='meal-type' checked='checked' />
+                <label for='breakfast-radio-btn' id='breakfast-button' class='menu-nav-label' onclick="showMenu('breakfast-menu-container')">
+                    Breakfast
+                </label>
+
+                <input type='radio' id='lunch-radio-btn' name='meal-type' />
+                <label id='lunch-button' class='menu-nav-label' for='lunch-radio-btn' onclick="showMenu('lunch-menu-container')">
+                    Lunch
+                </label>
+
+                <input type='radio' id='dinner-radio-btn' name='meal-type' />
+                <label for='dinner-radio-btn' id='dinner-button' class='menu-nav-label' onclick="showMenu('dinner-menu-container')">
+                    Dinner
+                </label>
             </div>
-            <div id='breakfast' class='menu-type-div'>
+            <div id='breakfast-menu-container' class='meal-type-container'>
                 <div class='menu-item'>
                     <div class='circular-img-div'>
                         <img src='images/egg.jpg' alt='fried eggs' />
@@ -140,7 +157,7 @@
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$15.25</p>
+                        <p class='orange-txt'>$15.25</p>
                     </div>
                 </div>
                 <div class='menu-item'>
@@ -152,7 +169,7 @@
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$29.99</p>
+                        <p class='orange-txt'>$29.99</p>
                     </div>
                 </div>
                 <div class='menu-item'>
@@ -164,7 +181,7 @@
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$22.75</p>
+                        <p class='orange-txt'>$22.75</p>
                     </div>
                 </div>
                 <div class='menu-item'>
@@ -177,12 +194,12 @@
                             likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$15.30</p>
+                        <p class='orange-txt'>$15.30</p>
                     </div>
                 </div>
             </div>
 
-            <div id='lunch' class='menu-type-div'>
+            <div id='lunch-menu-container' class='meal-type-container'>
                 <div class='menu-item'>
                     <div class='circular-img-div'>
                         <img src='images/chicken & rice.jpg' alt='mediterranean chicken' />
@@ -192,7 +209,7 @@
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$30.75</p>
+                        <p class='orange-txt'>$30.75</p>
                     </div>
                 </div>
                 <div class='menu-item'>
@@ -204,7 +221,7 @@
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$20.15</p>
+                        <p class='orange-txt'>$20.15</p>
                     </div>
                 </div>
                 <div class='menu-item'>
@@ -216,7 +233,7 @@
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$24.25</p>
+                        <p class='orange-txt'>$24.25</p>
                     </div>
                 </div>
                 <div class='menu-item'>
@@ -229,34 +246,34 @@
                             likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$35.25</p>
+                        <p class='orange-txt'>$35.25</p>
                     </div>
                 </div>
             </div>
 
-            <div id='dinner' class='menu-type-div'>
+            <div id='dinner-menu-container' class='meal-type-container'>
                 <div class='menu-item'>
                     <div class='circular-img-div'>
                         <img src='images/burger&fries.jpg' alt='burger and fries' />
                     </div>
                     <div>
-                        <h4>Mediterranean Chicken</h4>
+                        <h4>Cheeseburger Combo</h4>
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$30.75</p>
+                        <p class='orange-txt'>$27.30</p>
                     </div>
                 </div>
                 <div class='menu-item'>
                     <div class='circular-img-div'>
-                        <img src='images/foodP.jpg' alt='shrimp sandwich' />
+                        <img src='images/shrimp sandwich.jpg' alt='shrimp sandwich' />
                     </div>
                     <div>
                         <h4>Shrimp Sandwich</h4>
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$30.15</p>
+                        <p class='orange-txt'>$30.15</p>
                     </div>
                 </div>
                 <div class='menu-item'>
@@ -268,7 +285,7 @@
                         <p>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$24.25</p>
+                        <p class='orange-txt'>$24.25</p>
                     </div>
                 </div>
                 <div class='menu-item'>
@@ -281,48 +298,41 @@
                             likeness
                             a won&#39;t,
                             deep.</p>
-                        <p class='price'>$35.25</p>
+                        <p class='orange-txt'>$35.25</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contactContainer">
+    <section id="contact-container">
+        <h2>Get in touch</h2>
+        <p class='sub-heading'>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
+            likeness
+            a won&#39;t,
+            deep.</p>
         <div class="content">
-            <h2>Get in touch</h2>
-            <p class='sub-heading'>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
-                likeness
-                a won&#39;t,
-                deep.</p>
-
-            <div class="contactDiv">
-                <div class='info'>
-                    <div class="contactFormContainer">
-                        <form class="contact-form">
-                            <div class="content">
-                                <input placeholder="Name" id="nameBox">
-                                <input placeholder="E-mail" id="emailBox" type="email" onblur="validateEmail(this)"
-                                    required>
-                                <input placeholder="Phone number" type="tel" id="phoneBox" onblur="validatePhone(this)"
-                                    required>
-                                <textarea placeholder="Message" id="messageBox" required></textarea>
-                                <button id="submitButton" onclick="sendData()">Send</button>
-                        </form>
-                    </div>
-                </div>
-
-                <div>
-                    <img src='images/chef2.jpg' alt='chef' />
-                    <p>Phone number: 902-999-9999</p>
-                    <p>E-mail: inquiry@sultanskitchen.ca</p>
-                </div>
+            <div class="contact-form-container">
+                <form class="contact-form">
+                    <input placeholder="Name" id="nameBox" required />
+                    <input placeholder="E-mail" id="emailBox" type="email" required />
+                    <input placeholder="Phone number" type="tel" id="phoneBox" required />
+                    <textarea placeholder="Message" id="message-box" required></textarea>
+                    <button id="submit-button">Send</button>
+                </form>
             </div>
 
-            <div class='location'>
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11355.553053178372!2d-63.577522287048325!3d44.640200640182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1519272371336"
-                    frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div>
+                <img src='images/chef2.jpg' alt='chef' />
+                <p>Phone number: 902-999-9999</p>
+                <p>E-mail: inquiry@sultanskitchen.ca</p>
             </div>
+        </div>
+
+        <div class='location'>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d11355.553053178372!2d-63.577522287048325!3d44.640200640182634!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sca!4v1519272371336"
+                frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
         </div>
     </section>
     <footer>
