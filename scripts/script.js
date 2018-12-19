@@ -5,7 +5,10 @@ const titleElem = document.querySelector('.title-bar span');
 let backgroundColor = '';
 let txtColor = '';
 
+//if the screen size is at least 600px
 if (window.innerWidth >= 600) {
+
+    //change the header's background color, and the text color
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 0) {
             backgroundColor = '#fff';
@@ -22,6 +25,29 @@ if (window.innerWidth >= 600) {
             elem.style['color'] = txtColor;
         }
     });
+}
+
+//shows the reservation container
+function showReservation() {
+    const container = document.querySelector('.reservation-container');
+
+    container.style['opacity'] = 1;
+    container.style['pointer-events'] = 'initial';
+
+    //display the dates for the next three days on the dates selection
+    const dates = document.querySelector('.reservation-date select');
+    const d = new Date();
+    for (let i = 0; i < 3; i++) {
+        d.setDate(d.getDate() + 1);
+        dates.innerHTML += `<option>${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}</option>`;
+    }
+}
+
+function hideReservation() {
+    const container = document.querySelector('.reservation-container');
+
+    container.style['opacity'] = 0;
+    container.style['pointer-events'] = 'none';
 }
 
 //phone nav sandwich menu bars

@@ -46,7 +46,69 @@
         <div class="header-content" id='header-section'>
             <h1>Welcome to Sultan's Kitchen</h1>
             <span>There is first love and there is kithen love</span>
-            <button class='order-btn'>Order now</button>
+            <button class='order-btn' onclick='showReservation()'>Reserve a Table</button>
+        </div>
+
+        <div class='reservation-container'>
+            <div class='reservation-overlay' onclick='hideReservation()'></div>
+            <div class='reservation-content'>
+                <img src='images/table.jpeg' />
+                <h1>Reserve a Table</h1>
+                <form class='reservation-form'>
+                    <div class='reservation-form-content'>
+                        <div>
+                            <span>First Name</span>
+                            <input type='text' required />
+                        </div>
+                        <div>
+                            <span>Last Name</span>
+                            <input type='text' required />
+                        </div>
+                        <div>
+                            <span>Email</span>
+                            <input type='text' required />
+                        </div>
+                        <div>
+                            <span>Phone Number</span>
+                            <input type='text' required />
+                        </div>
+                        <div>
+                            <span>How Many People?</span>
+                            <select>
+                                <option>1 Person</option>
+                                <option>2 People</option>
+                                <option>3 People</option>
+                                <option>More than 3 People</option>
+                            </select>
+                        </div>
+                        <div class='reservation-date'>
+                            <span>Date</span>
+                            <select>
+                            </select>
+                        </div>
+                        <div>
+                            <span>Time</span>
+                            <select>
+                                <option>12:00 PM</option>
+                                <option>1:00 PM</option>
+                                <option>2:00 PM</option>
+                                <option>3:00 PM</option>
+                                <option>4:00 PM</option>
+                                <option>5:00 PM</option>
+                                <option>6:00 PM</option>
+                                <option>7:00 PM</option>
+                                <option>8:00 PM</option>
+                                <option>9:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class='message-container'>
+                        <span>Message</span>
+                        <textarea class='reservation-message'></textarea>
+                    </div>
+                    <button>Reserve Now</button>
+                </form>
+            </div>
         </div>
     </div>
     <section id='about-section'>

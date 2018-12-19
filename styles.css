@@ -153,6 +153,110 @@ a {
     cursor: pointer;
 }
 
+.reservation-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-content: center;
+    z-index: 5;
+    overflow-y: scroll;
+    opacity: 0;
+    pointer-events: none;
+    transition-duration: .5s;
+}
+
+.reservation-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.reservation-content {
+    position: relative;
+    top: 30%;
+    padding: 50px auto;
+    width: 75vw;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.reservation-content img {
+    width: 100%;
+    height: 500px;
+}
+
+.reservation-form {
+    padding: 50px;
+}
+
+.reservation-form-content {
+    display: block;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.reservation-form-content div {
+    margin-bottom: 30px;
+}
+
+.reservation-form-content div * {
+    display: block;
+    text-align: left;
+}
+
+.reservation-form input {
+    background-color: lightgray;
+    border: none;
+    width: 100%;
+    height: 50px;
+    text-indent: 5px;
+}
+
+.reservation-form-content select {
+    width: 100%;
+}
+
+.message-container {
+    text-align: left;
+}
+
+.reservation-message {
+    background-color: lightgray;
+    border: none;
+    width: 100%;
+    height: 150px;
+    margin-bottom: 30px;
+    text-align: left;
+    text-indent: 5px;
+    resize: none;
+}
+
+.reservation-form select {
+    background-color: lightgray;
+    border: none;
+    height: 30px;
+}
+
+.reservation-form button {
+    width: 100%;
+    height: 50px;
+    background-color: orange;
+    color: #efefef;
+    border: none;
+    cursor: pointer;
+    transition-duration: .5s;
+}
+
+.reservation-form button:hover {
+    background-color: darkorange;
+}
+
 #about-section {
     padding: 5% 0 15% 0;
 }
@@ -320,7 +424,7 @@ a {
 .location iframe {
     width: 100%;
     height: 400px;
-    margin-top: 10%;
+    margin-top: 100px;
 }
 
 footer {
@@ -358,6 +462,18 @@ footer {
     }
     .order-btn {
         margin-top: 0;
+    }
+    .reservation-form-content {
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .reservation-form input {
+        width: 90%;
+        margin-right: 10%;
+    }
+    .reservation-form-content select {
+        width: 90%;
+        margin-right: 10%;
     }
     .about-section-content {
         display: grid;
@@ -419,10 +535,13 @@ footer {
     .menu-item div p {
         text-align: left;
     }
+    #contact-container {
+        padding-top: 50px;
+    }
     #contact-container .content {
         display: grid;
         grid-template-columns: 50% 50%;
-        padding: 5% 3% 0 3%;
+        padding: 50px 10px 0px 10px;
     }
     #contact-container input,
     #message-box {
@@ -438,6 +557,12 @@ footer {
     }
     #about-section {
         padding: 0;
+    }
+    .reservation-content {
+        width: 800px;
+    }
+    .reservation-form {
+        max-width: 1500px;
     }
     .content {
         position: relative;
