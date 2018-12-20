@@ -36,10 +36,34 @@ function showReservation() {
 
     //display the dates for the next three days on the dates selection
     const dates = document.querySelector('.reservation-date select');
-    const d = new Date();
-    for (let i = 0; i < 3; i++) {
-        d.setDate(d.getDate() + 1);
-        dates.innerHTML += `<option>${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}</option>`;
+    const dateElems = dates.childElementCount; //the number of elements in the drop down menu
+
+    //if there are no dates in the drop down menu
+    if (dateElems === 0) {
+        //add three dates starting from today
+        const d = new Date();
+        for (let i = 0; i < 3; i++) {
+            d.setDate(d.getDate() + 1);
+            dates.innerHTML += `<option>${d.getDate()}/${d.getMonth() + 1}/${d.getFullYear()}</option>`;
+        }
+    }
+}
+
+function validateReservation() {
+    const inputs = document.querySelectorAll('.reservation-form input');
+    let valid = true; //assume that the inputs are valid
+
+    for (input of inputs) {
+        //if any of the inputs is empty, or dosen't match its specified type
+        if (input.value.trim() === '' || input.validity.typeMismatch) {
+            valid = false;
+        }
+    }
+
+    if (valid) {
+        window.event.preventDefault();
+        alert('Your reservation has been confirmed.\nSee you soon!');
+        hideReservation();
     }
 }
 
@@ -64,16 +88,18 @@ const menuTypes = ['#breakfast-menu-container', '#lunch-menu-container', '#dinne
 function expand() {
     if (!expanded) {
         bar1.style['transform'] = 'translate(100vw)';
+        bar1.style['float'] = 'right';
         bar2.style['transform'] = 'rotate(60deg)';
+        bar2.style['top'] = '30%';
         bar3.style['transform'] = 'rotate(-60deg)';
-        bar3.style['bottom'] = '30%';
         nav.style['opacity'] = '1';
         nav.style['transform'] = 'translateX(0%)';
     } else {
         bar1.style['transform'] = 'translate(0)';
+        bar1.style['float'] = 'none';
         bar2.style['transform'] = 'rotate(0)';
+        bar2.style['top'] = '0';
         bar3.style['transform'] = 'rotate(0)';
-        bar3.style['bottom'] = '0';
         nav.style['opacity'] = '0';
         nav.style['transform'] = 'translateX(200%)';
     }
