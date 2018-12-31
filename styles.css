@@ -59,6 +59,7 @@ a {
 .title-bar {
     position: relative;
     color: #fff;
+    z-index: 1;
 }
 
 .title-bar-content {
@@ -112,7 +113,6 @@ a {
     place-content: center;
     transform: translateX(200%);
     transition-duration: 1s;
-    z-index: 1;
 }
 
 #main-nav p {
@@ -291,6 +291,7 @@ a {
 .about-section-txt-container button:hover {
     background-color: orange;
     color: #fff;
+    border-color: rgba(0, 0, 0, 0);
 }
 
 .orange-txt {

@@ -30,9 +30,13 @@ if (window.innerWidth >= 600) {
 //shows the reservation container
 function showReservation() {
     const container = document.querySelector('.reservation-container');
+    const body = document.querySelector('body');
 
     container.style['opacity'] = 1;
     container.style['pointer-events'] = 'initial';
+
+    //hide the scroller for the body element
+    body.style['overflow-y'] = 'hidden';
 
     //display the dates for the next three days on the dates selection
     const dates = document.querySelector('.reservation-date select');
@@ -69,16 +73,20 @@ function validateReservation() {
 
 function hideReservation() {
     const container = document.querySelector('.reservation-container');
+    const body = document.querySelector('body');
 
     container.style['opacity'] = 0;
     container.style['pointer-events'] = 'none';
+
+    //show the scroller for the body element
+    body.style['overflow-y'] = 'scroll';
 }
 
 //phone nav sandwich menu bars
-const bar1 = document.querySelector('#bar1');
-const bar2 = document.querySelector('#bar2');
-const bar3 = document.querySelector('#bar3');
-const nav = document.querySelector('#main-nav');
+const bar1 = document.querySelector('#bar1'); //top bar
+const bar2 = document.querySelector('#bar2'); //middle bar
+const bar3 = document.querySelector('#bar3'); //bottom bar
+const nav = document.querySelector('#main-nav'); //nav elements container
 let expanded = false; //checks if the phone nav is expanded
 
 //meal types IDs
