@@ -3,7 +3,7 @@ const stickyNav = document.querySelector('.title-bar');
 const navElems = document.querySelectorAll('.title-bar p');
 const titleElem = document.querySelector('.title-bar span');
 let backgroundColor = '';
-let txtColor = '';
+let txtColor = '', oldTxtColor = '';
 
 //if the screen size is at least 600px
 if (window.innerWidth >= 600) {
@@ -12,17 +12,21 @@ if (window.innerWidth >= 600) {
     window.addEventListener('scroll', () => {
         if (window.pageYOffset > 0) {
             backgroundColor = '#fff';
-            txtColor = '#787878';
+            txtColor = 'dark-txt';
+            oldTxtColor = 'white-txt'
         }
         else {
             backgroundColor = 'rgba(0, 0, 0, 0)';
-            txtColor = '#fff';
+            txtColor = 'white-txt';
+            oldTxtColor = 'dark-txt';
         }
 
         stickyNav.style['background-color'] = backgroundColor;
-        titleElem.style['color'] = txtColor;
+        titleElem.classList.remove(oldTxtColor);
+        titleElem.classList.add(txtColor);
         for (const elem of navElems) {
-            elem.style['color'] = txtColor;
+            elem.classList.remove(oldTxtColor);
+            elem.classList.add(txtColor);
         }
     });
 }
@@ -119,11 +123,13 @@ function expand() {
 function showMenu(menuId) {
     menuTypes.forEach((item, index) => {
         if (`#${menuId}` !== item) {
-            document.querySelector(item).style['display'] = 'none';
+            document.querySelector(item).style['transform'] = 'translateY(10%)';
+            document.querySelector(item).style['opacity'] = '0';
         }
     });
 
-    document.querySelector(`#${menuId}`).style['display'] = 'grid';
+    document.querySelector(`#${menuId}`).style['transform'] = 'translateY(0)';
+    document.querySelector(`#${menuId}`).style['opacity'] = '1';
 }
 
 

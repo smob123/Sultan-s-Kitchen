@@ -37,7 +37,7 @@ a {
     display: inline-block;
 }
 
-.header {
+#header {
     position: relative;
     height: 100vh;
     width: 100%;
@@ -68,23 +68,22 @@ a {
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    padding-top: 1%;
 }
 
 .title-container {
     text-align: left;
     margin-left: 5%;
-    margin-top: 1%;
     font-size: 1.5rem;
 }
 
-.title-bar a {
+.title-container a {
     text-decoration: none;
     color: #efefef;
 }
 
 .phoneNav {
     position: relative;
-    top: 5px;
     left: 40%;
     height: 50px;
     width: 50px;
@@ -117,10 +116,17 @@ a {
 
 #main-nav p {
     display: inline-block;
-    color: #fff;
     text-decoration: none;
     transition-duration: .5s;
     cursor: pointer;
+}
+
+.white-txt {
+    color: #efefef;
+}
+
+.dark-txt {
+    color: #787878;
 }
 
 #main-nav p:hover {
@@ -185,7 +191,6 @@ a {
 
 .reservation-content {
     position: relative;
-    top: 40%;
     padding: 50px auto;
     width: 90vw;
     background-color: #fff;
@@ -312,7 +317,7 @@ a {
 }
 
 #offers-section {
-    clip-path: polygon(0 calc(15% - 8vw), 100% 0, 100% 100%, 0 calc(100% - 8vw));
+    clip-path: polygon(0 calc(5% - 8vw), 100% 0, 100% 100%, 0 calc(100% - 5vw));
     background-color: #f4f4f4;
 }
 
@@ -366,8 +371,14 @@ a {
     background-color: rgba(0, 0, 0, 0);
 }
 
+.menus-container {
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0);
+}
+
 .meal-type-container {
     margin-top: 10%;
+    transition-duration: 1s;
 }
 
 .menu-item {
@@ -378,7 +389,11 @@ a {
 
 #lunch-menu-container,
 #dinner-menu-container {
-    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(10%);
 }
 
 .circular-img-div {
@@ -391,7 +406,7 @@ a {
 }
 
 #contact-container {
-    clip-path: polygon(0 calc(15% - 8vw), 100% 0, 100% 100%, 0 100%);
+    clip-path: polygon(0 calc(5% - 8vw), 100% 0, 100% 100%, 0 100%);
     color: #787878;
     background-color: #f4f4f4;
     z-index: -3;
@@ -473,7 +488,6 @@ footer {
         grid-template-columns: 40% 60%;
     }
     #main-nav {
-        display: grid;
         grid-template-columns: repeat(5, 20%);
         text-align: left;
         position: relative;
@@ -530,6 +544,9 @@ footer {
         position: relative;
         padding: 50px;
     }
+    #offers-section {
+        clip-path: polygon(0 calc(15% - 8vw), 100% 0, 100% 100%, 0 calc(100% - 5vw));
+    }
     #offers-section .content {
         padding-top: 10%;
         padding-bottom: 10%;
@@ -567,6 +584,7 @@ footer {
     }
     #contact-container {
         padding-top: 50px;
+        clip-path: polygon(0 calc(10% - 8vw), 100% 0, 100% 100%, 0 100%);
     }
     .contact-content {
         padding-top: 10%;
