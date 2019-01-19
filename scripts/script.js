@@ -113,13 +113,13 @@ function expand() {
         bar2.style['top'] = '0';
         bar3.style['transform'] = 'rotate(0)';
         nav.style['opacity'] = '0';
-        nav.style['transform'] = 'translateX(200%)';
+        nav.style['transform'] = 'translateX(100vw)';
     }
 
     expanded = !expanded;
 }
 
-//handles showing different menus
+//handling displaying different menus on the menus section
 function showMenu(menuId) {
     menuTypes.forEach((item, index) => {
         if (`#${menuId}` !== item) {
@@ -145,4 +145,26 @@ function scrollToSection(secName) {
     if (window.innerWidth < 600) {
         expand();
     }
+}
+
+//handling offers-section slider
+const offersNavBtns = document.querySelectorAll('.offers-nav button'); //slider navigation buttons
+const slideContainer = document.querySelector('.slides');
+
+function slidePos(btn) {
+    offersNavBtns.forEach((item, index) => {
+        //check if user clicked on a button that's not currently selected
+        if (item !== btn && item.className == 'checked') {
+            item.classList.remove('checked');
+        }
+        else if (item === btn) {
+            item.classList.add('checked');
+            changeSlides(index); //move the slider container to view the target slide
+        }
+    });
+}
+
+function changeSlides(slidePos) {
+    //move the container based on the target slide's position
+    slideContainer.style['transform'] = `translateX(-${slidePos * 100}%)`;
 }
