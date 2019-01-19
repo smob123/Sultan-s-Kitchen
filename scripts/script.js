@@ -1,35 +1,47 @@
-//navigation bar style handeling
-const stickyNav = document.querySelector('.title-bar');
-const navElems = document.querySelectorAll('.title-bar p');
-const titleElem = document.querySelector('.title-bar span');
-let backgroundColor = '';
-let txtColor = '', oldTxtColor = '';
 
-//if the screen size is at least 600px
-if (window.innerWidth >= 600) {
+//handle navigation bar styling
+const stickyNav = document.querySelector('#title-bar');
+const navElems = document.querySelectorAll('#title-bar p');
+const titleElem = document.querySelector('#title-bar span');
+let txtColor = '', oldTxtColor = '', navState = '', oldNavState;
+const headerVideo = document.querySelector('video');
 
-    //change the header's background color, and the text color
-    window.addEventListener('scroll', () => {
+//change the header's background color, and the text color
+window.addEventListener('scroll', () => {
+    //if the window's y offset is larger than the header's height
+    if (window.pageYOffset >= window.innerHeight) {
+        headerVideo.pause(); //pause the background video
+    }
+    else {
+        headerVideo.play(); //otherwise play the video
+    }
+
+    //if the screen size is at least 600px
+    if (window.innerWidth >= 600) {
         if (window.pageYOffset > 0) {
-            backgroundColor = '#fff';
             txtColor = 'dark-txt';
-            oldTxtColor = 'white-txt'
+            oldTxtColor = 'white-txt';
+            oldNavState = 'title-bar-initial';
+            navState = 'title-bar-scrolled';
         }
         else {
-            backgroundColor = 'rgba(0, 0, 0, 0)';
             txtColor = 'white-txt';
             oldTxtColor = 'dark-txt';
+            oldNavState = 'title-bar-scrolled';
+            navState = 'title-bar-initial';
         }
 
-        stickyNav.style['background-color'] = backgroundColor;
+        stickyNav.classList.add(navState);
+        stickyNav.classList.remove(oldNavState);
+
         titleElem.classList.remove(oldTxtColor);
         titleElem.classList.add(txtColor);
         for (const elem of navElems) {
             elem.classList.remove(oldTxtColor);
             elem.classList.add(txtColor);
         }
-    });
-}
+    }
+});
 
 //shows the reservation container
 function showReservation() {
@@ -86,10 +98,8 @@ function hideReservation() {
     body.style['overflow-y'] = 'scroll';
 }
 
-//phone nav sandwich menu bars
-const bar1 = document.querySelector('#bar1'); //top bar
-const bar2 = document.querySelector('#bar2'); //middle bar
-const bar3 = document.querySelector('#bar3'); //bottom bar
+//phone nav hamburger menu bars
+const phoneNave = document.querySelector('#phone-nav');
 const nav = document.querySelector('#main-nav'); //nav elements container
 let expanded = false; //checks if the phone nav is expanded
 
@@ -99,21 +109,11 @@ const menuTypes = ['#breakfast-menu-container', '#lunch-menu-container', '#dinne
 //displays side nav when phone div is clicked
 function expand() {
     if (!expanded) {
-        bar1.style['transform'] = 'translate(100vw)';
-        bar1.style['float'] = 'right';
-        bar2.style['transform'] = 'rotate(60deg)';
-        bar2.style['top'] = '30%';
-        bar3.style['transform'] = 'rotate(-60deg)';
-        nav.style['opacity'] = '1';
-        nav.style['transform'] = 'translateX(0%)';
+        phoneNave.classList.add('expanded');
+        nav.classList.add('visible');
     } else {
-        bar1.style['transform'] = 'translate(0)';
-        bar1.style['float'] = 'none';
-        bar2.style['transform'] = 'rotate(0)';
-        bar2.style['top'] = '0';
-        bar3.style['transform'] = 'rotate(0)';
-        nav.style['opacity'] = '0';
-        nav.style['transform'] = 'translateX(100vw)';
+        phoneNave.classList.remove('expanded');
+        nav.classList.remove('visible');
     }
 
     expanded = !expanded;
