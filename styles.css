@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: default-font;
-    src: url('Fonts/CroissantOne-Regular.ttf');
+    src: url('assets/fonts/CroissantOne-Regular.ttf');
 }
 
 * {
@@ -17,6 +17,11 @@ body {
     padding: 0;
     text-align: center;
     overflow-x: hidden;
+}
+
+::selection {
+    background-color: orange;
+    color: #efefef;
 }
 
 section,
@@ -144,17 +149,9 @@ video {
 
 #main-nav p {
     display: inline-block;
-    text-decoration: none;
     transition-duration: .5s;
     cursor: pointer;
-}
-
-.white-txt {
     color: #efefef;
-}
-
-.dark-txt {
-    color: #787878;
 }
 
 #main-nav p:hover {
@@ -548,11 +545,12 @@ footer {
         z-index: 5;
         transition-duration: .5s;
     }
-    .title-bar-initial {
-        background-color: rgba(0, 0, 0, 0);
-    }
-    .title-bar-scrolled {
+    #title-bar.scrolled {
         background-color: #fff;
+    }
+    #title-bar.scrolled p,
+    #title-bar.scrolled span {
+        color: #787878;
     }
     .title-bar-content {
         grid-template-columns: 40% 60%;
@@ -560,12 +558,13 @@ footer {
     #main-nav {
         grid-template-columns: repeat(5, 20%);
         text-align: left;
-        position: relative;
+        position: initial;
         width: 100%;
-        height: inherit;
+        height: initial;
         opacity: 1;
         transform: translateX(0);
         background-image: initial;
+        place-content: initial;
     }
     .header-content {
         top: 50%;

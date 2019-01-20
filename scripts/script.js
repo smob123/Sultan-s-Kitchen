@@ -1,9 +1,5 @@
-
 //handle navigation bar styling
 const stickyNav = document.querySelector('#title-bar');
-const navElems = document.querySelectorAll('#title-bar p');
-const titleElem = document.querySelector('#title-bar span');
-let txtColor = '', oldTxtColor = '', navState = '', oldNavState;
 const headerVideo = document.querySelector('video');
 
 //change the header's background color, and the text color
@@ -19,26 +15,10 @@ window.addEventListener('scroll', () => {
     //if the screen size is at least 600px
     if (window.innerWidth >= 600) {
         if (window.pageYOffset > 0) {
-            txtColor = 'dark-txt';
-            oldTxtColor = 'white-txt';
-            oldNavState = 'title-bar-initial';
-            navState = 'title-bar-scrolled';
+            stickyNav.classList.add('scrolled');
         }
         else {
-            txtColor = 'white-txt';
-            oldTxtColor = 'dark-txt';
-            oldNavState = 'title-bar-scrolled';
-            navState = 'title-bar-initial';
-        }
-
-        stickyNav.classList.add(navState);
-        stickyNav.classList.remove(oldNavState);
-
-        titleElem.classList.remove(oldTxtColor);
-        titleElem.classList.add(txtColor);
-        for (const elem of navElems) {
-            elem.classList.remove(oldTxtColor);
-            elem.classList.add(txtColor);
+            stickyNav.classList.remove('scrolled');
         }
     }
 });
