@@ -5,11 +5,13 @@ const headerVideo = document.querySelector('video');
 //change the header's background color, and the text color
 window.addEventListener('scroll', () => {
     //if the window's y offset is larger than the header's height
-    if (window.pageYOffset >= window.innerHeight) {
-        headerVideo.pause(); //pause the background video
-    }
-    else {
-        headerVideo.play(); //otherwise play the video
+    if (headerVideo) {
+        if (window.pageYOffset >= window.innerHeight) {
+            headerVideo.pause(); //pause the background video
+        }
+        else {
+            headerVideo.play(); //otherwise play the video
+        }
     }
 
     //if the screen size is at least 600px
