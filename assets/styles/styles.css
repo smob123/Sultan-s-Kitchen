@@ -1,14 +1,15 @@
 /* general */
 
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 @font-face {
     font-family: default-font;
-    src: url('../fonts/CroissantOne-Regular.ttf');
+    src: url('https://fonts.googleapis.com/css?family=Oswald');
 }
 
 * {
     max-width: 100%;
     text-align: center;
-    font-family: default-font;
 }
 
 body {
@@ -29,12 +30,29 @@ div {
     text-align: center;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+
 h2 {
     color: #383838;
 }
 
 p {
     color: #696969;
+}
+
+p,
+span {
+    font-size: 1.2rem;
+    font-family: 'Noto Sans', sans-serif;
+    letter-spacing: 1px;
 }
 
 a {
@@ -94,6 +112,12 @@ video {
 .title-container a {
     text-decoration: none;
     color: #efefef;
+}
+
+.title-container a span {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
 }
 
 #phone-nav {
@@ -318,7 +342,7 @@ video {
 .about-section-txt-container button {
     background-color: rgba(0, 0, 0, 0);
     border: 1px solid #787878;
-    padding: 5px 10px;
+    padding: 10px 30px;
     cursor: pointer;
     transition-duration: .5s;
 }
