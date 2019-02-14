@@ -1,3 +1,21 @@
+//handle dom elements loading
+document.addEventListener('DOMContentLoaded', () => {
+    const loadingContainer = document.querySelector('.loading-container');
+
+    //if the loading container exists
+    if (loadingContainer) {
+        loadingContainer.classList.add('finished'); //hide it
+
+        //remove it from the dom after one second
+        setTimeout(() => {
+            loadingContainer.style['display'] = 'none';
+        }, 1000);
+    }
+
+    //make the page scrollable again
+    document.querySelector('body').style['overflow-y'] = 'auto';
+});
+
 //handle navigation bar styling
 const stickyNav = document.querySelector('#title-bar');
 const headerVideo = document.querySelector('video');
