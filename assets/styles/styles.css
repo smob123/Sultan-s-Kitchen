@@ -13,7 +13,6 @@ body {
     padding: 0;
     text-align: center;
     overflow-x: hidden;
-    overflow-y: hidden;
 }
 
 ::selection {
@@ -61,85 +60,34 @@ a {
     display: inline-block;
 }
 
-.loading-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #f9f9f9;
-    z-index: 500;
+@keyframes enlarge {
+    0% {transform: scale(0);}
+    100% {transform: scale(1);}
+}
+
+.animate {
     transition-duration: .5s;
 }
 
-.loading-container.finished {
-    transform: translateY(-100%);
+.hidden {
     opacity: 0;
+    pointer-events: none;
 }
 
-.loading-container .pizza {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 10rem;
-    height: 10rem;
-    border-radius: 50%;
-    background-color: burlywood;
-    animation-name: spin;
-    animation-duration: 2s;
-    animation-timing-function: linear;
-    -webkit-animation-timing-function: linear;
-    animation-iteration-count: infinite;
+.hidden.up {
+    transform: translateY(-100%);
 }
 
-.cheese {
-    position: relative;
-    width: 90%;
-    height: 90%;
-    background-color: rgb(226, 226, 33);
-    border-radius: 50%;
+.hidden.down {
+    transform: translateY(100%);
 }
 
-.cheese > div {
-    display: inline-block;
-    position: relative;
-    width: 15%;
-    height: 15%;
-    background-color: red;
-    border-radius: 50%;
+.hidden.left {
+    transform: translateX(-100%);
 }
 
-.pep1 {
-    top: 20%;
-    left: 10%;
-}
-
-.pep2 {
-    top: 20%;
-    left: 40%;
-}
-
-.pep3 {
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.pep4 {
-    top: 70%;
-    right: 38%;
-}
-
-.pep5 {
-    top: 65%;
-    right: 10%;
-}
-
-@keyframes spin {
-    from {transform: rotate(0deg);}
-    to {transform: rotate(360deg);}
+.hidden.right {
+    transform: translateX(100%);
 }
 
 #header {

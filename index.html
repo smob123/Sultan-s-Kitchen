@@ -12,24 +12,12 @@
 </head>
 
 <body>
-    <div class='loading-container'>
-        <div class='pizza'>
-            <div class='cheese'>
-                <div class='pep1'></div>
-                <div class='pep2'></div>
-                <div class='pep3'></div>
-                <div class='pep4'></div>
-                <div class='pep5'></div>
-            </div>
-        </div>
-    </div>
-
     <div id='header'>
         <video autoplay muted loop>
             <source src="assets/videos/background.mp4" type="video/mp4">
         </video>
         <div class='header-overlay'></div>
-        <div id='title-bar'>
+        <div id='title-bar' class='animate hidden up'>
             <div class='title-bar-content'>
                 <div class='title-container'>
                     <a href='index.html'><span>Sultan's Kitchen</span></a>
@@ -63,9 +51,11 @@
         </div>
 
         <div class="header-content" id='header-section'>
-            <h1>Welcome to Sultan's Kitchen</h1>
-            <span>There is first love and there is kithen love</span>
-            <button class='reservation-btn' onclick='showReservation()'>Reserve a Table</button>
+            <div class='animate hidden left'>
+                <h1 class='animate hidden left'>Welcome to Sultan's Kitchen</h1>
+                <span>There is first love and there is kithen love</span>
+                <button class='reservation-btn' onclick='showReservation()'>Reserve a Table</button>
+            </div>
         </div>
 
         <div class='reservation-container'>
@@ -133,7 +123,7 @@
     <section id='about-section'>
         <div class="content">
             <div class="about-section-content">
-                <div class='about-section-txt-container'>
+                <div class='about-section-txt-container animate hidden left'>
                     <p>OUR STORY</p>
                     <h2 id='about-section-heading'>Welcome</h2>
                     <p>Image Shall stars every gathering kind said image morning upon don&#39;t. Our midst over of be
@@ -146,7 +136,7 @@
                         <button>Learn More</button>
                     </a>
                 </div>
-                <div class='about-section-img'>
+                <div class='about-section-img animate hidden right'>
                     <img src='assets/images/chef.jpg' alt='image'>
                 </div>
             </div>
@@ -155,13 +145,16 @@
 
     <section class='menu-div' id='offers-section'>
         <div class="content">
-            <p>OUR OFFERS</p>
-            <h2>Our Offers This Week</h2>
-            <p class='sub-heading'>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
-                likeness a won&#39;t,
-                deep.</p>
+            <div class='animate hidden left'>
+                <p>OUR OFFERS</p>
+                <h2>Our Offers This Week</h2>
+                <p class='sub-heading'>Green from Created moved i lights us isn&#39;t tree midst herb, herb void
+                    dominion
+                    likeness a won&#39;t,
+                    deep.</p>
+            </div>
 
-            <div id="offers">
+            <div id="offers" class='animate hidden right'>
                 <div class='slides'>
                     <div class='offer-group'>
                         <div class='offer-container'>
@@ -322,12 +315,14 @@
     </section>
 
     <section id='menu-section'>
-        <h1>Our Menu</h1>
-        <p class='sub-heading'>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
-            likeness
-            a won&#39;t,
-            deep.</p>
-        <div class='menu-content'>
+        <div class='animate hidden left'>
+            <h1>Our Menu</h1>
+            <p class='sub-heading'>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
+                likeness
+                a won&#39;t,
+                deep.</p>
+        </div>
+        <div class='menu-content animate hidden right'>
             <div class='menu-nav-container'>
                 <input type='radio' id='breakfast-radio-btn' name='meal-type' checked='checked' />
                 <label for='breakfast-radio-btn' id='breakfast-button' class='menu-nav-label'
@@ -518,13 +513,16 @@
 
     <section id="contact-container">
         <div class='contact-content'>
-            <h2>Get in touch</h2>
-            <p class='sub-heading'>Green from Created moved i lights us isn&#39;t tree midst herb, herb void dominion
-                likeness
-                a won&#39;t,
-                deep.</p>
+            <div class='animate hidden left'>
+                <h2>Get in touch</h2>
+                <p class='sub-heading'>Green from Created moved i lights us isn&#39;t tree midst herb, herb void
+                    dominion
+                    likeness
+                    a won&#39;t,
+                    deep.</p>
+            </div>
             <div class="content">
-                <div class="contact-form-container">
+                <div class="contact-form-container animate hidden left">
                     <form class="contact-form">
                         <input placeholder="Name" id="nameBox" required />
                         <input placeholder="E-mail" id="emailBox" type="email" required />
@@ -534,7 +532,7 @@
                     </form>
                 </div>
 
-                <div>
+                <div class='animate hidden right'>
                     <img src='assets/images/chef2.jpg' alt='chef' />
                     <p>Phone number: 902-999-9999</p>
                     <p>E-mail: inquiry@sultanskitchen.ca</p>
@@ -591,6 +589,7 @@
     </footer>
 
     <script src='assets/scripts/script.js'></script>
+    <script src='assets/scripts/animations.js'></script>
 </body>
 
 </html>
