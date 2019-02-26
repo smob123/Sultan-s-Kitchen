@@ -66,43 +66,10 @@ img {
     min-height: 150px;
 }
 
-@keyframes enlarge {
-    0% {transform: scale(0);}
-    100% {transform: scale(1);}
-}
-
-.animate {
-    transition-duration: .5s;
-}
-
-.hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.hidden.up {
-    transform: translateY(-100%);
-}
-
-.hidden.down {
-    transform: translateY(100%);
-}
-
-.hidden.left {
-    transform: translateX(-100%);
-}
-
-.hidden.right {
-    transform: translateX(100%);
-}
-
-#header {
+#header > div {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
     overflow: hidden;
 }
 
@@ -126,6 +93,8 @@ video {
 
 #title-bar {
     position: relative;
+    top: 0;
+    left: 0;
     color: #fff;
     z-index: 1;
 }
@@ -220,8 +189,8 @@ video {
 
 .header-content {
     position: relative;
-    top: 35%;
-    transform: translateY(-35%);
+    top: 50%;
+    transform: translateY(-50%);
     color: #fff;
     border: 1px solid rgba(0, 0, 0, 0);
     font-size: 1.3rem;
@@ -359,6 +328,8 @@ video {
 }
 
 .about-section-img {
+    display: grid;
+    place-content: center;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -410,11 +381,8 @@ video {
     clip-path: polygon(0 calc(5% - 8vw), 100% 0, 100% 100%, 0 calc(100% - 5vw));
     background-color: #f4f4f4;
     height: 100%;
-}
-
-#offers-section .content {
-    padding-top: 50%;
-    padding-bottom: 50%;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 #offers {
@@ -427,6 +395,7 @@ video {
     display: grid;
     grid-template-columns: repeat(3, 100%);
     transition-duration: .5s;
+    transition-property: transform;
 }
 
 .offer-group {
@@ -498,7 +467,7 @@ video {
 
 .menus-container {
     position: relative;
-    border: 1px solid rgba(0, 0, 0, 0);
+    border: 1px solid transparent;
 }
 
 .meal-type-container {
@@ -526,19 +495,22 @@ video {
     margin-right: 10%;
 }
 
-.circular-img-div img {
+.circular-img-div {
     border-radius: 50%;
+    width: 150px;
+    height: 150px;
+}
+
+.circular-img-div img {
+    width: 100%;
+    height: 100%;
 }
 
 #contact-container {
+    padding-top: 100px;
     clip-path: polygon(0 calc(5% - 8vw), 100% 0, 100% 100%, 0 100%);
     color: #787878;
     background-color: #f4f4f4;
-    z-index: -3;
-}
-
-.contact-content {
-    padding-top: 50%;
 }
 
 .contact-form {
@@ -637,7 +609,7 @@ footer .social-media-container {
     margin-bottom: 10%;
 }
 
-footer .social-media-container i {
+footer .social-media-container * {
     border-radius: 50%;
     border: 1px solid #222222;
     background-color: #222222;
@@ -647,12 +619,12 @@ footer .social-media-container i {
     cursor: pointer;
 }
 
-footer .social-media-container i:hover {
+footer .social-media-container *:hover {
     background-color: #181818;
     color: #efefef;
 }
 
-footer .social-media-container i:nth-child(2) {
+footer .social-media-container *:nth-child(2) {
     margin: auto 5%;
 }
 
@@ -771,10 +743,6 @@ footer .social-media-container i:nth-child(2) {
     #main-nav p {
         color: #efefef;
     }
-    .header-content {
-        top: 50%;
-        transform: translateY(-50%);
-    }
     .reservation-btn {
         margin-top: 0;
     }
@@ -830,13 +798,6 @@ footer .social-media-container i:nth-child(2) {
     #offers-section {
         clip-path: polygon(0 calc(15% - 8vw), 100% 0, 100% 100%, 0 calc(100% - 5vw));
     }
-    #offers-section .content {
-        padding-top: 10%;
-        padding-bottom: 10%;
-    }
-    #offers {
-        padding: 0;
-    }
     .offer-group {
         display: grid;
         grid-template-columns: repeat(3, 30%);
@@ -864,11 +825,8 @@ footer .social-media-container i:nth-child(2) {
         text-align: left;
     }
     #contact-container {
-        padding-top: 50px;
+        padding-top: 100px;
         clip-path: polygon(0 calc(15% - 8vw), 100% 0, 100% 100%, 0 100%);
-    }
-    .contact-content {
-        padding-top: 10%;
     }
     #contact-container .content {
         display: grid;
@@ -902,7 +860,7 @@ footer .social-media-container i:nth-child(2) {
     footer .social-media-container i {
         padding: 2%;
     }
-    footer .social-media-container i:nth-child(2) {
+    footer .social-media-container *:nth-child(2) {
         margin: auto 2%;
     }
 }
@@ -969,7 +927,7 @@ footer .social-media-container i:nth-child(2) {
     footer .social-media-container {
         margin-bottom: 100px;
     }
-    footer .social-media-container i {
+    footer .social-media-container * {
         padding: 1.5%;
     }
     /*our_story.html*/
