@@ -9,7 +9,7 @@ class App extends Component {
 
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <ScrollToTop>
           <Route exact path='/' component={Home} />
           <Route path='/our_story' component={OurStory} />

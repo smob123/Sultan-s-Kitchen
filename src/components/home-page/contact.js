@@ -33,10 +33,10 @@ export default function Contact() {
                 </div>
             </div>
 
-            <div class='location'>
+            <div className='location'>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d26449.16282203406!2d-118.24802729810257!3d34.04030357672751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e3!4m0!4m5!1s0x80c2c633e76e882d%3A0x37f7f74ab21c52bc!2s730-712+San+Pedro+St%2C+Los+Angeles%2C+CA+90014%2C+USA!3m2!1d34.040207699999996!2d-118.2473107!5e0!3m2!1sen!2ssa!4v1547921511149"
-                    title='location-map' frameborder="0"></iframe>
+                    title='location-map' frameBorder="0"></iframe>
             </div>
         </div>
     );
