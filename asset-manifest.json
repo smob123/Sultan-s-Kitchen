@@ -1,18 +1,20 @@
 {
-  "main.css": "/Sultan-s-Kitchen/static/css/main.f624872b.chunk.css",
-  "main.js": "/Sultan-s-Kitchen/static/js/main.a61ceef2.chunk.js",
-  "main.js.map": "/Sultan-s-Kitchen/static/js/main.a61ceef2.chunk.js.map",
-  "runtime~main.js": "/Sultan-s-Kitchen/static/js/runtime~main.9c091c10.js",
-  "runtime~main.js.map": "/Sultan-s-Kitchen/static/js/runtime~main.9c091c10.js.map",
-  "static/js/2.0633cf08.chunk.js": "/Sultan-s-Kitchen/static/js/2.0633cf08.chunk.js",
-  "static/js/2.0633cf08.chunk.js.map": "/Sultan-s-Kitchen/static/js/2.0633cf08.chunk.js.map",
-  "index.html": "/Sultan-s-Kitchen/index.html",
-  "precache-manifest.0a2ddf3f4d6b7d92f2b60a81fcb3664b.js": "/Sultan-s-Kitchen/precache-manifest.0a2ddf3f4d6b7d92f2b60a81fcb3664b.js",
-  "service-worker.js": "/Sultan-s-Kitchen/service-worker.js",
-  "static/css/main.f624872b.chunk.css.map": "/Sultan-s-Kitchen/static/css/main.f624872b.chunk.css.map",
-  "static/media/background.mp4": "/Sultan-s-Kitchen/static/media/background.083c8044.mp4",
-  "static/media/max-599.png": "/Sultan-s-Kitchen/static/media/max-599.fabcd327.png",
-  "static/media/min-600.png": "/Sultan-s-Kitchen/static/media/min-600.fc4c62b4.png",
-  "static/media/min-900.png": "/Sultan-s-Kitchen/static/media/min-900.fa5520be.png",
-  "static/media/styles.css": "/Sultan-s-Kitchen/static/media/our_story_header.9b631f93.jpeg"
+  "files": {
+    "main.css": "/Sultan-s-Kitchen/static/css/main.84fa2452.chunk.css",
+    "main.js": "/Sultan-s-Kitchen/static/js/main.0009f1ad.chunk.js",
+    "main.js.map": "/Sultan-s-Kitchen/static/js/main.0009f1ad.chunk.js.map",
+    "runtime~main.js": "/Sultan-s-Kitchen/static/js/runtime~main.723c0598.js",
+    "runtime~main.js.map": "/Sultan-s-Kitchen/static/js/runtime~main.723c0598.js.map",
+    "static/js/2.694bbf59.chunk.js": "/Sultan-s-Kitchen/static/js/2.694bbf59.chunk.js",
+    "static/js/2.694bbf59.chunk.js.map": "/Sultan-s-Kitchen/static/js/2.694bbf59.chunk.js.map",
+    "index.html": "/Sultan-s-Kitchen/index.html",
+    "precache-manifest.e8e7bef60d7953ffcde36c73c3947610.js": "/Sultan-s-Kitchen/precache-manifest.e8e7bef60d7953ffcde36c73c3947610.js",
+    "service-worker.js": "/Sultan-s-Kitchen/service-worker.js",
+    "static/css/main.84fa2452.chunk.css.map": "/Sultan-s-Kitchen/static/css/main.84fa2452.chunk.css.map",
+    "static/media/background.mp4": "/Sultan-s-Kitchen/static/media/background.083c8044.mp4",
+    "static/media/max-599.png": "/Sultan-s-Kitchen/static/media/max-599.fabcd327.png",
+    "static/media/min-600.png": "/Sultan-s-Kitchen/static/media/min-600.fc4c62b4.png",
+    "static/media/min-900.png": "/Sultan-s-Kitchen/static/media/min-900.fa5520be.png",
+    "static/media/styles.css": "/Sultan-s-Kitchen/static/media/our_story_header.9b631f93.jpeg"
+  }
 }
