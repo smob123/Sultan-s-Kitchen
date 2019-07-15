@@ -5890,6 +5890,10 @@ lodash.uniq@^4.5.0:
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
+lodash@^4.17.13:
+  version "4.17.14"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.14.tgz#9ce487ae66c96254fe20b599f21b6816028078ba"
+
 loglevel@^1.4.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.6.1.tgz#e0fc95133b6ef276cdc8887cdaf24aa6f156f8fa"
@@ -6425,11 +6429,10 @@ npm-bundled@^1.0.1:
   version "1.0.6"
   resolved "https://registry.yarnpkg.com/npm-bundled/-/npm-bundled-1.0.6.tgz#e7ba9aadcef962bb61248f91721cd932b3fe6bdd"
 
-npm-check-updates@^3.1.17:
-  version "3.1.17"
-  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-3.1.17.tgz#7811040d0325e371030dca1800b805b6f8b8f29b"
+npm-check-updates@^3.1.20:
+  version "3.1.20"
+  resolved "https://registry.yarnpkg.com/npm-check-updates/-/npm-check-updates-3.1.20.tgz#9dd719bc04af9c273b33b44a7d5368d5e85ae9c2"
   dependencies:
-    bluebird "^3.5.5"
     chalk "^2.4.2"
     cint "^8.2.1"
     cli-table "^0.3.1"
@@ -6439,14 +6442,12 @@ npm-check-updates@^3.1.17:
     get-stdin "^7.0.0"
     json-parse-helpfulerror "^1.0.3"
     libnpmconfig "^1.2.1"
-    lodash "^4.17.11"
+    lodash "^4.17.13"
     node-alias "^1.0.4"
     pacote "^9.5.1"
     progress "^2.0.3"
     prompts "^2.1.0"
-    rc-config-loader "^2.0.3"
-    registry-auth-token "^4.0.0"
-    registry-url "^5.1.0"
+    rc-config-loader "^2.0.4"
     requireg "^0.2.2"
     semver "^6.2.0"
     semver-utils "^1.1.4"
@@ -7813,13 +7814,13 @@ raw-body@2.3.3:
     iconv-lite "0.4.23"
     unpipe "1.0.0"
 
-rc-config-loader@^2.0.3:
-  version "2.0.3"
-  resolved "https://registry.yarnpkg.com/rc-config-loader/-/rc-config-loader-2.0.3.tgz#5fbe45784c3301b15350ab6507e023c33007928f"
+rc-config-loader@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/rc-config-loader/-/rc-config-loader-2.0.4.tgz#fe23e26a87e2ec07541b29e7f37bfd75807a4c36"
   dependencies:
-    debug "^3.1.0"
+    debug "^4.1.1"
     js-yaml "^3.12.0"
-    json5 "^1.0.1"
+    json5 "^2.1.0"
     object-assign "^4.1.0"
     object-keys "^1.0.12"
     path-exists "^3.0.0"
@@ -8145,14 +8146,7 @@ registry-auth-token@^3.4.0:
     rc "^1.1.6"
     safe-buffer "^5.0.1"
 
-registry-auth-token@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.yarnpkg.com/registry-auth-token/-/registry-auth-token-4.0.0.tgz#30e55961eec77379da551ea5c4cf43cbf03522be"
-  dependencies:
-    rc "^1.2.8"
-    safe-buffer "^5.0.1"
-
-registry-url@^5.0.0, registry-url@^5.1.0:
+registry-url@^5.0.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/registry-url/-/registry-url-5.1.0.tgz#e98334b50d5434b81136b44ec638d9c2009c5009"
   dependencies:
