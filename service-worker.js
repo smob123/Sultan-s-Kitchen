@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Sultan-s-Kitchen/precache-manifest.e8e7bef60d7953ffcde36c73c3947610.js"
+  "/Sultan-s-Kitchen/precache-manifest.16d84531c3b1ca720aba5ffb1446db23.js"
 );
 
 self.addEventListener('message', (event) => {
