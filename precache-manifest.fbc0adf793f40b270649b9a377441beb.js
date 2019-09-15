@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "32378de2cdc26e475f77586f459c4da4",
+    "revision": "dce45068e78bb7266bc35cc0e8962b47",
     "url": "/Sultan-s-Kitchen/index.html"
   },
   {
-    "revision": "4444bbddb8df6c5b7815",
+    "revision": "5cc446672d5c3bd80b14",
     "url": "/Sultan-s-Kitchen/static/css/main.ee8e487a.chunk.css"
   },
   {
-    "revision": "aaffee0013a48b625d35",
-    "url": "/Sultan-s-Kitchen/static/js/2.77e96804.chunk.js"
+    "revision": "1ba0e97a8311d00e666c",
+    "url": "/Sultan-s-Kitchen/static/js/2.7b55b109.chunk.js"
   },
   {
-    "revision": "4444bbddb8df6c5b7815",
-    "url": "/Sultan-s-Kitchen/static/js/main.709d83d9.chunk.js"
+    "revision": "5cc446672d5c3bd80b14",
+    "url": "/Sultan-s-Kitchen/static/js/main.181cccf1.chunk.js"
   },
   {
-    "revision": "e2f5cd9978256ecd9705",
-    "url": "/Sultan-s-Kitchen/static/js/runtime~main.75c37bb1.js"
+    "revision": "9368db05a2318bd80787",
+    "url": "/Sultan-s-Kitchen/static/js/runtime~main.e6963aa5.js"
   },
   {
     "revision": "083c8044b17cfcec908e46ed2dec6842",
